@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .one-text {
+            animation: moveto1 3s 1 forwards;
+        }
+
+        @keyframes moveto1 {
+            from {
+                transform: translate(60, 60);
+            }
+
+            to {
+                transform: translate(350px, 120px);
+            }
+        }
+
+        .two-text {
+            animation: moveto2 3s 1 forwards;
+        }
+
+        @keyframes moveto2 {
+            from {
+                transform: translate(10, 30);
+            }
+
+            to {
+                transform: translate(350px, 70px);
+            }
+        }
+
+        
+        .three-text {
+            animation: moveto3 3s 1 forwards;
+        }
+
+        @keyframes moveto3 {
+            from {
+                transform: translate(10, 30);
+            }
+
+            to {
+                transform: translate(350px, 30px);
+            }
+        }
+
+        
+        .four-text {
+            animation: moveto4 3s 1 forwards;
+        }
+
+        @keyframes moveto4 {
+            from {
+                transform: translate(10, 30);
+            }
+
+            to {
+                transform: translate(350px, -20px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+    <svg width="700" height="440" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <rect x="320" y="0" width="350" height="430" style="fill:rgb(85,187,197);stroke-width:5;stroke:rgb(255,255,0)" />
+        <rect onclick="onebtn();" id="one" x="0" y="0" width="300" height="100" style="fill:rgb(85,187,197);stroke-width:3;stroke:rgb(66,221,91)" />
+        <rect onclick="twobtn();" id="two" x="0" y="110" width="300" height="100" style="fill:rgb(85,187,197);stroke-width:3;stroke:rgb(66,221,91)" />
+        <rect onclick="threebtn();" x="0" y="220" width="300" height="100" style="fill:rgb(85,187,197);stroke-width:3;stroke:rgb(66,221,91)" />
+        <rect onclick="fourbtn();" x="0" y="330" width="300" height="100" style="fill:rgb(85,187,197);stroke-width:3;stroke:rgb(66,221,91)" />
+        <text x="400" y="60" fill="black" style="font-size: xxx-large;">登鹳雀楼</text>
+        <text x="480" y="110" fill="black" style="font-size: x-large;">作者：王之涣</text>
+        <text id="one-text" x="60" y="60" fill="black" style="font-size: xx-large;">白日依山尽</text>
+        <text id="two-text" x="60" y="170" fill="black" style="font-size: xx-large;">黄河入海流</text>
+        <text id="three-text" x="60" y="270" fill="black" style="font-size: xx-large;">欲穷千里目</text>
+        <text id="four-text" x="60" y="380" fill="black" style="font-size: xx-large;">更上一层楼</text>
+    </svg>
+    <script>
+        function onebtn() {
+            var one = document.getElementById("one-text");
+            one.setAttribute("class","one-text");
+        }
+
+        function twobtn() {
+            var two = document.getElementById("two-text");
+            two.setAttribute("class","two-text");
+        }
+
+        function threebtn() {
+            var three = document.getElementById("three-text");
+            three.setAttribute("class","three-text");
+        }
+
+        function fourbtn() {
+            var four = document.getElementById("four-text");
+            four.setAttribute("class","four-text");
+        }
+    </script>
+</body>
+
+</html>

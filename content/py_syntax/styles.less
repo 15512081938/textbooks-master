@@ -1,0 +1,85 @@
+// =============================================================================
+// PY_Syntax_en
+// (c) Mathigon
+// =============================================================================
+
+@import "../shared/vendor/styles/monokai.css";
+@import "../shared/variables";
+@import "../shared/components/solid";
+
+
+
+// -----------------------------------------------------------------------------
+// Introduction
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+.code {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 4px 6px 2px;
+  margin: -2px 1px;
+  white-space: nowrap;
+}
+
+
+.one-text {
+  animation: moveto1 3s 1 forwards;
+}
+
+@keyframes moveto1 {
+  from {
+      transform: translate(60, 60);
+  }
+
+  to {
+      transform: translate(350px, 120px);
+  }
+}
+
+.two-text {
+  animation: moveto2 3s 1 forwards;
+}
+
+@keyframes moveto2 {
+  from {
+      transform: translate(10, 30);
+  }
+
+  to {
+      transform: translate(350px, 70px);
+  }
+}
+
+
+.three-text {
+  animation: moveto3 3s 1 forwards;
+}
+
+@keyframes moveto3 {
+  from {
+      transform: translate(10, 30);
+  }
+
+  to {
+      transform: translate(350px, 30px);
+  }
+}
+
+
+.four-text {
+  animation: moveto4 3s 1 forwards;
+}
+
+@keyframes moveto4 {
+  from {
+      transform: translate(10, 30);
+  }
+
+  to {
+      transform: translate(350px, -20px);
+  }
+}
