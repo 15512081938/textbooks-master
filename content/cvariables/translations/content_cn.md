@@ -11,36 +11,41 @@
 
 > id:introductiontovariables
 
-The _{code}"Hello World!"_ program simply writes to the screen. It does not read anything, calculate anything, or allow for user input. That’s no fun!
+相信小伙伴们都见过这句话吧：_{code}"Hello World!"_ ，它的中文是“你好，世界”。它呢，只是一句展示的话，没有让我们输入，也没有做什么计算。这样似乎感觉没什么意思，有没有？我也想展示我想输入的内容，也想计算1+1等于多少？
 
-Real programs tend to produce results based on some input that the user of the program gives, rather than just outputting the same thing every time.
+而在我们的计算机世界中，你也不想一直看到“Hello World”吧，计算机，它是会自己做一些计算的。或者说，我们想要什么结果，通过输入某些数据就可以计算得到。
 
-To read something from the keyboard, we first need somewhere in the computer’s memory to store data. That is where variables come in.
+计算机是如何存储数据的呢，我们的一张美美的照片，一篇优美的文章word，甚至我们会玩的“我的世界”，都是在占用我们的存储空间的，就是我们会谈到的“硬盘”。
 
-A **variable** is simply a name that represents a particular piece of your computer’s memory that has been set aside for you to store, retrieve, and use data.
+我们在打字的时候，计算机要读取我们输入的数据，存到哪里呢，就是存到我们说到的存储空间里，它会找到一块位置，就像我们的家园，占用了一块土地，这就是我们的家，于是就要引出我们这次的主题了——“**变量**”。
 
-In this lesson, we will learn about some of the basic data types:
+**变量**，我们听着似乎很陌生，又感觉理解了它，从我们的理解，感觉到它是会变的，没错，它确实是会变的，但是它有自己的名字，就像我们的家，有固定的地址一样，这个是不会变的。
 
-- int: integer numbers
+有自己的名字（地址），就意味着我有了自己的土地，可以种菜，可以玩耍，这就要看我们想干什么了。
+
+在接下来的课程中，我们先学习一些C++的基本数据类型，如下所示：
+
+- int：整数
   
-- double: floating-point numbers
+- double：浮点数
   
-- char: individual characters
+- char：单个字符
 
-- string: a sequence of characters
+- string：字符序列
   
-- bool: true/false values
+- bool：正确/错误值
 
-Every variable has a **type**, which represents the kind of information you can store inside of it. It tells your compiler how much memory to set aside for the variable, and it defines what you can do with the variable.
-
+我们可以看到，我们的变量呢，有很多**类型**：有的可以存数字，有的可以存字母，有的可以存一句话，有的还可以判断是不是正确的。它主要告诉我们，我们需要多大的土地，并且这片土地你可以用来干嘛。
 
 ##### 使用说明
 
-Click Next to continue.
+观看下图，老师为你们做了一个小总结：
 
 ::: column(width=1000)
     x-img(src="images/datatypes.gif" width=1000 height=880)
 :::
+
+看完就可以点击下一步啦~
 
 _{button.next-step} Continue_ 
 
