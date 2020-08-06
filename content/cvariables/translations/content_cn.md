@@ -51,7 +51,7 @@ _{button.next-step} Continue_
 
 ---
 
-### Step 1: Declare a Variable
+### 步骤 1: 声明一个变量
 
 > id:declareavariable
 
@@ -60,54 +60,57 @@ _{button.next-step} Continue_
 "Every variable in C++ must be declared before it can be used!"
 ```
 
-Suppose we are building a game and we want to keep track of a player’s score that goes from 0 to 10. We need a variable!
+假设我们正在开发一款游戏，并且希望时刻能够知道玩家得了多少分，得分从0到10。那么此时就需要一个变量去保存它！
 
-Before we can use a variable, we must declare, or create, it. To declare a variable, we need to provide two things:
+我们要使用变量，那肯定就要先声明或创建它，不然没法使用的。 要声明变量，我们需要做两件事：
 
-- A type for the variable.
+- 变量的种类。
 
-- A name for the variable.
+- 变量的名称。
 
-So to declare an integer variable called score, we need to write:
+通常来说，我们说分数是整数的吧，比如说1分，2分，3分，10分，100分。那么此时此刻，我们也需要给分数声明一个这样的整数变量，我们可以这样写（如下框所示）：
 
 ```c++
 int score;
 ```
 
-- The _{code}int_ is the type of the variable.
+- _{code}int_ 是变量的类型。
 
-- The _{code}score_ is the name of the variable.
+- _{code}score_ 是变量的名称。
 
-- The _{code};_ is how we end a statement.
+- _{code};_ 是我们结束语句的方式。
+- 
+要注意，在C++中，变量名只能是：字母，数字、下划线。
 
-In C++, variable names consist only of upper/lower case letters, digits, and/or underscores.
-
-**Note**: C++ is known as a strongly typed language. If you try to give an integer value a decimal number, you are going to get unexpected results, warnings, or errors.
+**注意**：C++被称为强类型语言。如果您一定要给整数类型赋值一个只有一串数字，您可能会得到一个警告，或者错误的提示。
 
 ##### 使用说明
 
-_{input#declareavariable(type="checkbox" disabled="disabled")}_ 1.Inside the variable.cpp file, declare an int variable named year.
+_{input#declareavariable(type="checkbox" disabled="disabled")}_ 1.在variable.cpp文件中，声明一个名字为year的int变量。
 
-_{input#declareavariable(type="checkbox" disabled="disabled")}_ 2.Type the following commands in the terminal and press _{code}enter_:
+_{input#declareavariable(type="checkbox" disabled="disabled")}_ 2.当你输入完成上面的要求后，在终端（黑窗口），输入下面的命令，然后按一下 _{code}enter_ 键:
 
-Compile:
+编译:
 
 ```c++
 g++ variable.cpp
 ```
 
-Execute:
+执行:
 
 ```c++
 ./a.out
 ```
 
-This checkpoint will pass after you execute.
+
+当你执行完成时，那么恭喜你，你的程序就没有错误了。
+
+    include codes/declareavariable.cpp
 
     div#ide
         pre.initcode
             include codes/declareavariable.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -115,39 +118,39 @@ _{button.next-step} Continue_
 
 > id:initializeavariable
 
-### Step 2: Initialize a Variable
+### 步骤 2: 初始化变量
 
-After we declare a variable, we can give it a value!
+我们既然声明了一个变量，那么我们就可以给它赋一个值了！
 
-Suppose that we have declared an _{code}int_ variable called _{code}score_ , to set it to 0, we can simply write:
+假设我们声明了一个名为 _{code}score_ ，类型为 _{code}int_ 的变量，并将它的值设置为0，我们可以这样简单的写：
 
 ```c++
 score = 0;
 ```
 
-The _{code}score_ is the name of the variable.
+_{code}score_ 是变量的名称。
 
-The _{code}=_ indicates assignment.
+_{code}=_ 表示分配，或者说是给变量赋值。
 
-The _{code}0_ is the value you want to store inside the variable.
+_{code}0_ 是要存储在变量中的值，也就是变量的值。
 
-**Note**: In C++, a single equal sign = does not really mean “equal”. It means “assign”. In the code above, we are assigning the score variable a value of 0.
+**注意**：在C++中，一个等号 = 并不表示 “等于” 。 它的意思是“分配”或者说“赋值”。 在上面的代码中，我们为score变量分配了“0”值。
 
 ##### 使用说明
 
-_{input#initializeavariable(type="checkbox" disabled="disabled")}_  1.Inside the **variable.cpp** file, you have declared an _{code}int_ variable named _{code}year_ .
+_{input#initializeavariable(type="checkbox" disabled="disabled")}_ 1.在 **variable.cpp** 文件中，您声明了一个名为 _{code}year_ 的 _{code}int_ 变量。
 
-Let’s give the variable a value of 2019.
+现在我们需要将它的值变成2020。
 
-_{input#initializeavariable(type="checkbox" disabled="disabled")}_  2.Type the following commands in the terminal and press _{code}enter_:
+_{input#initializeavariable(type="checkbox" disabled="disabled")}_  2.当你输入完成上面的要求后，在终端（黑窗口），输入下面的命令，然后按一下 _{code}enter_ 键:
 
-Compile:
+编译:
 
 ```c++
 g++ variable.cpp
 ```
 
-Execute:
+执行:
 
 ```c++
 ./a.out
@@ -156,20 +159,20 @@ Execute:
     div#ide
         pre.initcode
             include codes/initializeavariable.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
 ---
 
 
-### Combining Step 1 and Step 2
+### 结合步骤1和步骤2
 
 > id:combiningstep1andstep2
 
-We can both declare and assign a value to a variable in a single initialization statement.
+我们可以在单个初始化语句中，声明一个变量，并为这个变量赋值。
 
-Suppose we have these two lines:
+假设我们有这两行：
 
 ```c++
 // Declare a variable
@@ -179,35 +182,35 @@ int score;
 score = 0;
 ```
 
-We can actually combine these two lines into a single line of code:
+实际上，我们可以将这两行合并为一行代码，如下所示：
 
 ```c++
 int score = 0;
 ```
 
-This means we are declaring an integer called _{code}score_ and setting it equal to 0.
+这个意思就是说，我们要声明一个名为 _{code}score_ 的整数变量，并且将它的值设置为0。
 
 ::: column(width=600)
     x-img(src="images/combiningstep1andstep2.png" width=600 height=340)
 :::
 
-**Note**: We only need to declare a variable one time! And it is highly suggested to initialize a variable before using it later.
+**注意**：我们只需要声明一次变量就可以啦！ 强烈建议先初始化变量，然后我们再去使用它。
 
 ##### 使用说明
 
-_{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  1.In your program, declare and initialize an _{code}int_ variable named _{code}year_ and initialize its value as 2019.
+_{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  1.在你的程序中，请声明一个变量，并且初始化它，要求名为 _{code}year_ ，类型是 _{code}int_ ，并将它的值，初始化为2020。
 
-Let’s give the variable a value of 2019.
+现在我们需要将它的值变成2020。
 
-_{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  2.Type the following commands in the terminal and press _{code}enter_:
+_{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  2.当你输入完成上面的要求后，在终端（黑窗口），输入下面的命令，然后按一下 _{code}enter_ 键:
 
-Compile:
+编译:
 
 ```c++
 g++ variable.cpp
 ```
 
-Execute:
+执行:
 
 ```c++
 ./a.out
@@ -216,7 +219,7 @@ Execute:
     div#ide
         pre.initcode
             include codes/combiningstep1andstep2.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -285,7 +288,7 @@ _{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 3.Compile and
     div#ide
         pre.initcode
             include codes/arithmeticoperators.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -354,7 +357,7 @@ _{input#chaining(type="checkbox" disabled="disabled")}_ 2.Compile and execute yo
     div#ide
         pre.initcode
             include codes/combiningstep1andstep2.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -411,7 +414,7 @@ Type a number in the terminal and press _{}enter_ .
     div#ide
         pre.initcode
             include codes/userinput.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -462,7 +465,7 @@ Your terminal then should look something like:
     div#ide
         pre.initcode
             include codes/challengetemperature1.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -493,7 +496,7 @@ _{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.Compile a
     div#ide
         pre.initcode
             include codes/challengetemperature2.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
 
 _{button.next-step} Continue_ 
 
@@ -540,4 +543,4 @@ Complete the **bmi.cpp** program.
     div#ide
         pre.initcode
             include codes/review.cpp
-        iframe(src="http://114.116.82.25:7000/#/ide?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+        iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")

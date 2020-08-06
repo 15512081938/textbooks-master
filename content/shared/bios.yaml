@@ -270,18 +270,9 @@ bjarne:
   full: Bjarne Stroustrup
   born: 1950
   bio: |
-    __Bjarne Stroustrup__ (born 1950) Bujani Stroustrup, was born on June 11, 1950, Danish.
+    __Bjarne Stroustrup__ (born 1950) 布贾尼·斯特劳斯特卢普，出生于1950年6月11日，丹麦人。他是一名计算机科学家，在得克萨斯A&M大学担任计算机科学的主席教授。他最着名的贡献就是开发了C++程序设计语言。
     
-    He is a computer scientist and serves as the chair professor of computer science at Texas A&M University.
-    
-    His most famous contribution is the development of the C++ programming language.
-
-    In 1982, Dr. Bjarne Stroustrup of American AT&T Bell Labs introduced and expanded the object-oriented concept on the basis of the C language, and invented a new programming language.
-    
-    In order to express the relationship between the language and the c language, it was named C++.
-    
-    And Dr. Bjarne Stroustrup (Benjani Stroustrup) is honored as the father of C++ language.
-
+    1982年，美国AT&T公司贝尔实验室的Bjarne Stroustrup博士在c语言的基础上引入并扩充了面向对象的概念，发明了—种新的程序语言。为了表达该语言与c语言的渊源关系，它被命名为C++。而Bjarne Stroustrup(本贾尼·斯特劳斯特卢普)博士被尊称为C++语言之父。
     
 bolyai:
   born: 1802
