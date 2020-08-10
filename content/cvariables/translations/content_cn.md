@@ -9,7 +9,7 @@
 
 ### 介绍变量
 
-> id:introductiontovariables
+> id: introductiontovariables
 
 相信小伙伴们都见过这句话吧：_{code}"Hello World!"_ ，它的中文是“你好，世界”。它呢，只是一句展示的话，没有让我们输入，也没有做什么计算。这样似乎感觉没什么意思，有没有？我也想展示我想输入的内容，也想计算1+1等于多少？
 
@@ -53,8 +53,7 @@ _{button.next-step} Continue_
 
 ### 步骤 1: 声明一个变量
 
-> id:declareavariable
-
+> id: declareavariable
 
 ```c++
 "Every variable in C++ must be declared before it can be used!"
@@ -102,10 +101,7 @@ g++ variable.cpp
 ./a.out
 ```
 
-
 当你执行完成时，那么恭喜你，你的程序就没有错误了。
-
-    include codes/declareavariable.cpp
 
     div#ide
         pre.initcode
@@ -116,9 +112,9 @@ _{button.next-step} Continue_
 
 ---
 
-> id:initializeavariable
-
 ### 步骤 2: 初始化变量
+
+> id: initializeavariable
 
 我们既然声明了一个变量，那么我们就可以给它赋一个值了！
 
@@ -168,7 +164,7 @@ _{button.next-step} Continue_
 
 ### 结合步骤1和步骤2
 
-> id:combiningstep1andstep2
+> id: combiningstep1andstep2
 
 我们可以在单个初始化语句中，声明一个变量，并为这个变量赋值。
 
@@ -225,25 +221,29 @@ _{button.next-step} Continue_
 
 ---
 
-### Arithmetic Operators
+### 算术运算符
 
-> id:arithmeticoperators
+> id: arithmeticoperators
 
-Computers are incredible at doing calculations. Now that we have declared variables, let’s use them with arithmetic operators to calculate things!
+在上几节，我们了解到，计算机如果需要存储一个变量，需要一开始的时候就要声明，对吧？
 
-Here are some arithmetic operators:
+那么，它既然有了变量了，总不能攒着它，一直占内存吧，肯定会有什么用？
 
-- _{code}+_ addition
+而我们应该知道，计算机在计算数据的方面是比人脑要快好多好多倍的。那么，我们现在就让计算机和我们的变量开始一起计算吧！
+
+以下呢，是一些常见的算术运算符：
+
+- _{code}+_ 加
   
-- _{code}-_ subtraction
+- _{code}-_ 减
   
-- _{code}*_ multiplication
+- _{code}*_ 乘
   
-- _{code}/_ division
+- _{code}/_ 除
   
-- _{code}%_ modulo (divides and gives the remainder)
+- _{code}%_ 模（除并得到余数）
   
-For example:
+如下代码:
 
 ```c++
 int score = 0;
@@ -265,25 +265,25 @@ score = 5 % 2;
 // and now 1
 ```
 
-**Note**: The order of operations can be specified using parentheses. For example, the use of parentheses in _{code}score = 5 * (4 + 3)_ sets _{code}score_ equal to _{code}5 * 7_ rather than _{code}20 + 3_.
+**注意**：我们可以通过添加括号来先操作某一个程序。 例如，在 _{code}score = 5 *（4 + 3）_ 中，可以使用括号将 _{code}score_ 得到 _{code}5 * 7_ 而不是 _{code} 5 * 4 + 3_ 而得到了 _{code}23_ 。
 
 ##### 使用说明
 
-_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 1.In **math.cpp,** we have already declared and initialized a variable called _{code}score_ for you.
+_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 1.在 **math.cpp**中，我们已经为你声明了一个变量，名为 _{code}score_ ，并做了初始化。
 
-Let’s change its value by giving it the value of 1234 multiplied by 99.
+让我们给1234乘以99，来改变一下它的值。
 
-_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 2.But how would we know what that value is?
+_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 2.但是我们怎么知道那个值是什么呢？
 
-You can output the value by simply adding this code underneath:
+你只需要，在下面添加以下代码，即可输出值：
 
 ```c++
 std::cout << score << "\n";
 ```
 
-Notice how when we want to output a variable, we don’t add double quotes around its name.
+请注意，当我们要输出这个变量时，我们不需要在变量名的两边写双引号。
 
-_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 3.Compile and execute your program using the terminal.
+_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 3.使用终端编译并执行程序。
 
     div#ide
         pre.initcode
@@ -294,13 +294,13 @@ _{button.next-step} Continue_
 
 ---
 
-### Chaining
+### 链式
 
-> id:chaining
+> id: chaining
 
-Now that we have outputted a variable and have also outputted things using multiple  _{code}couts_ . Let’s take a closer look at  _{code}cout_ again.
+现在，我们已经输出了一个变量，并且还使用 _{code}couts_ 输出了多个值。让我们再仔细看看 _{code}cout_ 。
 
-If we have the code below:
+如果我们有以下代码：
 
 ```c++
 int age = 28;
@@ -310,23 +310,23 @@ std::cout << age;
 std::cout << " years old\n";
 ```
 
-It will output:
+它的输出结果是:
 
 ```c++
 Hello, I am 28 years old
 ```
 
-Notice how we use quotes around the characters in  _{code}"Hello, I am "_  but not in  _{code}age_ .
+请注意，我们为什么要在 _{code}“Hello, I am”_ 这一串字符的两边使用双引号，但在 _{code}age_ 两边却不用呢。
 
-We use quotes when we want a literal string.
+当我们需要文字，或者字符串的时候，这个时候就需要用到引号了。
 
-We don’t use quotes when we refer to the value of something with a name (like a variable).
+当我们使用变量名，来输出某个值时，我们就不需要使用引号。
 
-So now, is it possible to write the  _{code}cout_ statements within a single line?
+因此，那我们是不是可以在一行内，通过 _{code}cout_ 语句，编写出来呢？
 
-Yep! You can use multiple  _{code}<<_ operators to chain the things you want to output.
+是的，您可以使用多个 _{code}<<_ 运算符来把需要输出的内容，连接在一起。
 
-For the same code above you can also do:
+对于上面所说的，你可以这样实现：
 
 ```c++
 int age = 28;
@@ -334,25 +334,25 @@ int age = 28;
 std::cout << "Hello, I am " << age << " years old\n";
 ```
 
-This is called chaining.
+这个，就称为链式。
 
 使用说明
 
-_{input#chaining(type="checkbox" disabled="disabled")}_ 1.Inside **game.cpp**, we have declared and initialized an  _{code}int_ variable called  _{code}score_.
+_{input#chaining(type="checkbox" disabled="disabled")}_ 1.在**game.cpp**文件里，我们已经声明了一个变量，名为 _{code}score_ ，数据类型为 _{code}int_ ，并且为它做了初始化。
 
-Now output the following using chaining:
+现在使用链式输出下面的内容：
 
 ```c++
 Player score: [score]
 ```
 
-where _{code}[score]_ should be the value of the variable _{code}score_ .
+本来 _{code}[score]_ 应该是，变量 _{code}score_ 的值。
 
-Make sure to add a new line after!
+感觉没什么错了，就添加一个新行！
 
-Checkpoint 2 Passed
+检查两遍，就可以通过了
 
-_{input#chaining(type="checkbox" disabled="disabled")}_ 2.Compile and execute your program using the terminal.
+_{input#chaining(type="checkbox" disabled="disabled")}_ 2.使用终端编译并执行程序。
 
     div#ide
         pre.initcode
@@ -363,45 +363,47 @@ _{button.next-step} Continue_
 
 ---
 
-### User Input
+### 用户输入
 
-> id:userinput
+> id: userinput
 
-Like we mentioned in the introduction, another way to assign a value to a variable is through user input. A lot of times, we want the user of the program to enter information for the program.
+就像我们在介绍中提到的变量，它们的值是通过我们在键盘上敲一些字符，才得到的，这个就是我们提到的用户输入。
 
-We have _{code}cout_ for output, and there is something called _{code}cin_ that’s used for input!
+我们在键盘上输入了一些字符后，通过按下 _{code}enter_ 键，我们的程序就能收到，它就能做其他的操作了。
+
+我们在前面也看到过了，C++是通过 _{code}cout_ 来输出我们想要的数据，而通过 _{code}cin_ 是我们输入的数据，或者说我们想让变量成为我们设定的值。
 
 ```c++
 std::cout << "Enter your password: ";
 std::cin >> password;
 ```
 
-The name _{code}cin_ refers to the standard input stream (pronounced “see-in”, for character input). The second operand of the _{code}>>_ operator (“get from”) specifies where that input goes.
+ _{code}cin_ 这个单词，代表的就是标准的输入流，也就是说，我们想要输入的数据能让计算机读懂，需要通过它来表示出来（它的读音，就是 see-in 这样读）。通常来说，我们如果有 _{code}cin_ ，就需要后面跟着一个 _{code}>>_ 符号，它的作用呢，就是为了起到了，为了给输入的数据，指定一个位置
 
-To see how it works, we have to try it with a program.
+想知道它的工作原理吗？想知道的话，我们就要使用一下这个程序。
 
 ##### 使用说明
-_{input#userinput(type="checkbox" disabled="disabled")}_ 1.Add the following code:
+_{input#userinput(type="checkbox" disabled="disabled")}_ 1.将下面的代码在我们的编辑器中写入:
 
 ```c++
 std::cin >> tip;
 ```
 
-So that the user of the program can enter something with their keyboard and what they enter gets saved in the _{code}int_ variable named _{code}tip_ .
+这样，用户在键盘上输入的一些数据，就通过 _{code}enter_ 让程序读到它。并且呢，我们现在有 _{code}tip_ 变量，数据类型为 _{code}int_ ,程序会将我们输入的数据，赋值给 _{code}tip_ 。
 
-_{input#userinput(type="checkbox" disabled="disabled")}_ 2.Let’s output the following using chaining:
+_{input#userinput(type="checkbox" disabled="disabled")}_ 2.让我们通过链表，来将下面的数据，输出来。
 
 ```c++
 You paid [tip] dollars.
 ```
 
-where the _{code}[tip]_ should be the value of the variable _{code}tip_.
+_{code}[tip]_ 应该是 变量 _{code}tip_ 的值。
 
-Make sure to add a new line to the end of the output.
+确保将新的一行，添加到了输出端。
 
-_{input#userinput(type="checkbox" disabled="disabled")}_ 3.Compile and execute your program using the terminal.
+_{input#userinput(type="checkbox" disabled="disabled")}_ 3.我们使用终端，编译、并执行我们的程序。
 
-Your terminal then should look something like:
+然后，我们的终端应该是这个样子：
 
 ```c++
 $ g++ tip.cpp
@@ -409,7 +411,7 @@ $ ./a.out
 Enter a tip amount: 
 ```
 
-Type a number in the terminal and press _{}enter_ .
+在我们的终端上，输入一个数字，然后按 _{code}enter_ 结束。
 
     div#ide
         pre.initcode
@@ -420,47 +422,45 @@ _{button.next-step} Continue_
 
 ---
 
-### Challenge: Temperature (Part 1)
+### 挑战一下：温度（第1部分）
 
-> id:challengetemperature1
+> id: challengetemperature1
 
-Now that we’ve learned about the basics of variables and _{code}cin_ , let’s write a program!
+现在，相信同学们已经了解了变量，以及 _{code}cin_ 输入流。有这些基础，我们就可以编写一个程序啦！
 
-The mad scientist Kelvin has mastered predicting the weather in his mountain-side meteorology lab.
+曾经，有位疯狂的科学家，叫开尔文（Kelvin），有一次，他在山腰的气象实验室里，熟练地预测了天气。
 
-Recently, Kelvin began publishing his weather forecasts on his website, however, there’s a problem: All of his forecasts describe the temperature in Fahrenheit degrees.
+最近，开尔文（Kelvin）开始在他的网站上，发布了天气预报，但是存在一个问题：他的所有天气预报，都以华氏（F）温度为单位，进行描述。
 
-Let’s convert a temperature from Fahrenheit (F) to Celsius (C).
+我们通常说温度，都是用的摄氏（C），很少有人能把华氏转换成摄氏。那么，我们通过计算机就可以实现这个过程。
 
-The formula is the following:
+让我们将温度从华氏（F）转换为摄氏（C），是有个公式的。公式如下：
 
 C=(F−32)/1.8
 
 ##### 使用说明
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  1.First, google the current temperature of New York in Fahrenheit.
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  1.首先，我们使用谷歌或者百度，看一下现在，北京的温度，是多少华氏温度的。
 
-Declare a _{code}double_ variable named _{code}tempf_ and initialize it with the temperature.
+声明一个名称为 _{code}tempf_ 数据类型为 _{code}double_ 的变量，并让它做为温度的代表，对它做一个初始化。
 
-Declare another _{code}double_ variable named _{code}tempc_ .
+声明另一个，名称为 _{code}tempc_ 数据类型为 _{code}double_ 的变量，
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  2.Calculate the temperature to Celsius.
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  2.将华氏温度，转换成摄氏温度。
 
-Store it in  _{code}tempc_ .
+并且要讲摄氏温度的值，存到 _{code}tempc_ 里。
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  3.Display the result.
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  3.展示这个结果。
 
-Output exactly this:
+输出以下内容:
 
 ```c++
 The temp is [tempc] degrees Celsius.
 ```
 
-Don’t forget to add a _{code}\n_ .
+不要忘记，在这句话最后面，加一个换行符 _{code}\n_ ，这个是让我们的数据，单独占据一行。
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.Compile and execute the program using the terminal.
-
-Your terminal then should look something like:
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.使用终端（黑窗口），编译并执行我们的程序。
 
     div#ide
         pre.initcode
@@ -471,27 +471,28 @@ _{button.next-step} Continue_
 
 ---
 
-### Challenge: Temperature (Part 2)
+### 挑战一下：温度（第2部分）
 
-> id:challengetemperature2
+> id: challengetemperature2
 
-Let’s go back to the temperature.cpp that we wrote. This time, instead of giving _{code}tempf_ a value of the current temperature in New York:
+让我们回到我们刚刚写过的 **temperature.cpp** 。我们不要像下面这样，直接赋值给 _{code}tempf_ 一个温度值。
 
 ```c++
 tempf = 83;
 ```
 
-Let’s ask the user what the temperature is using _{code}cin_ !
+让我们使用 _{code}cin_ 来输入一个当前温度值!
 
 ##### 使用说明
 
-_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 1.Tell the user “Enter the temperature in Fahrenheit: “ using _{code}std::cout_ .
+_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 1.使用 _{code}std::cout_ 作为一个提示，告诉用户 “输入一个华氏温度”。
 
 And get their input using _{code}std::cin_ and store it in _{code}tempf_.
+然后使用 _{code}std::cin_ 来获取他们输入的值，并将这个值存储在 _{code}tempf_ 中。
 
-Checkpoint 2 Passed
+检查两遍，可以通过了。
 
-_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.Compile and execute your program using the terminal.
+_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.使用终端，编译并执行程序。
 
     div#ide
         pre.initcode
@@ -502,43 +503,47 @@ _{button.next-step} Continue_
 
 ---
 
-### Review
+### 总结
 
-> id:review
+> id: review
 
-You made it to the end of the lesson! High five. 🙌
+恭喜你，你已经完成了本课的学习。为你鼓鼓掌。🙌
 
-Here is a review of the lesson:
+我们来做一下课前的回顾吧：
 
-- A variable represents a particular piece of your computer’s memory that has been set aside for you to use to store, retrieve, and manipulate data.
+- 一个变量，在计算机中，是占用一块特定内存的。而且占用了内存之后，就可以做一些其他的操作，比如存储值，使用这个数据等等。
 
-- C++ basic data types include:
+- C ++基本数据类型包括：
   
-_{code}int_ : integers
+_{code}int_ : 整型
 
-_{code}double_ : floating-point numbers
+_{code}double_ : 浮点数（我们俗称的小数）
 
-_{code}char_ : individual characters
+_{code}char_ : 单个字符
 
-_{code}string_ : sequence of characters
+_{code}string_ : 多个字符组成的串
 
-_{code}bool_ : true/false
+_{code}bool_ : 逻辑型（正确/错误）
 
-- Single equal sign _{code}=_ indicates assignment, not equality in the mathematical sense.
+- 一个等号 _{code}=_ 表示赋值，而不是数学意义上的相等。
 
-- _{code}cin_ is how to receive input from the user.
+- _{code}cin_ 是可以从用户的输入来获取数据。
 
 ##### 使用说明
 
-_{input#review(type="checkbox" disabled="disabled")}_ 1.Optional: The body mass index (BMI) is commonly used by health and nutrition professionals to estimate human body fat in populations.
+_{input#review(type="checkbox" disabled="disabled")}_ 1.附加题：我们身体是不是健康的呢？我们都不确定，有的人说很健康，有的人却不健康，我们如果要科学的定义我们的身体健康程度，有一个词，大家应该了解一下，那这个词就是 “身体质量指数（BMI）” 。这个词呢，可以用来检测我们人体的脂肪的。
 
-It is computed by taking the individual’s weight in kilograms (kg) and dividing it by the square of their height in meters (`m^2`):
+这个词呢，是有一个公式的，如下所示：
 
-bmi= `weight/(height^2)`
 
-Complete the **bmi.cpp** program.
+    x-img(src="images/bmi.png" width=450 height=270)
 
-(You can also just run the code as is to move on.)
+
+它将通过人的体重（我们一般说人的体重是多少公斤，也就是多少kg，而这里就是使用了kg，作为单位），除以我们的 _{code}身高的平方_ 来计算（身高是用 m 来做计算的）。
+
+完成 **bmi.cpp** 程序。
+
+(你也可以直接运行该代码，我们为你提供了源代码)
 
     div#ide
         pre.initcode
