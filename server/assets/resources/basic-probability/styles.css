@@ -1,0 +1,37 @@
+.code_quote {
+  color: #15141f;
+  background-color: #eae9ed;
+  white-space: normal;
+  vertical-align: initial;
+  font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+  font-size: 0.9rem;
+}[dir] .code_quote {
+  padding: 0 0.25rem;
+  margin: 0 0.0625rem;
+  border-radius: 0.125rem;
+}
+article {
+  max-width: 100%;
+}
+.sidebar {
+  width: 200px;
+}
+[dir=ltr] body > .body {
+  padding: 0 40px 0 calc(200px + 40px);
+}
+[dir=rtl] body > .body {
+  padding: 0 calc(200px + 40px) 0 40px;
+}
+.spinner circle {
+  fill: #ccc;
+}
+.spinner rect {
+  fill: #0f82f2;
+  cursor: pointer;
+}
+[dir] .spinner rect {
+  transform-origin: center;
+}
+.spinner .sector-1 {
+  fill: #cd0e66;
+}

@@ -11,6 +11,7 @@
 
 > id: introductiontovariables
 
+
 相信小伙伴们都见过这句话吧：_{code}"Hello World!"_ ，它的中文是“你好，世界”。它呢，只是一句展示的话，没有让我们输入，也没有做什么计算。这样似乎感觉没什么意思，有没有？我也想展示我想输入的内容，也想计算1+1等于多少？
 
 而在我们的计算机世界中，你也不想一直看到“Hello World”吧，计算机，它是会自己做一些计算的。或者说，我们想要什么结果，通过输入某些数据就可以计算得到。
@@ -87,7 +88,7 @@ int score;
 
 _{input#declareavariable(type="checkbox" disabled="disabled")}_ 1.在variable.cpp文件中，声明一个名字为year的int变量。
 
-_{input#declareavariable(type="checkbox" disabled="disabled")}_ 2.当你输入完成上面的要求后，在终端（黑窗口），输入下面的命令，然后按一下 _{code}enter_ 键:
+_{input#declareavariable(type="checkbox" disabled="disabled")}_ 2.当你输入完成上面的要求后，在编辑器，输入下面的命令，然后按一下 _{code}enter_ 键:
 
 编译:
 
@@ -138,7 +139,7 @@ _{input#initializeavariable(type="checkbox" disabled="disabled")}_ 1.在 **varia
 
 现在我们需要将它的值变成2020。
 
-_{input#initializeavariable(type="checkbox" disabled="disabled")}_  2.当你输入完成上面的要求后，在终端（黑窗口），输入下面的命令，然后按一下 _{code}enter_ 键:
+_{input#initializeavariable(type="checkbox" disabled="disabled")}_  2.当你输入完成上面的要求后，在编辑器，输入下面的命令，然后按一下 _{code}enter_ 键:
 
 编译:
 
@@ -198,7 +199,7 @@ _{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  1.在你�
 
 现在我们需要将它的值变成2020。
 
-_{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  2.当你输入完成上面的要求后，在终端（黑窗口），输入下面的命令，然后按一下 _{code}enter_ 键:
+_{input#combiningstep1andstep2(type="checkbox" disabled="disabled")}_  2.当你输入完成上面的要求后，在编辑器，输入下面的命令，然后按一下 _{code}enter_ 键:
 
 编译:
 
@@ -283,7 +284,7 @@ std::cout << score << "\n";
 
 请注意，当我们要输出这个变量时，我们不需要在变量名的两边写双引号。
 
-_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 3.使用终端编译并执行程序。
+_{input#arithmeticoperators(type="checkbox" disabled="disabled")}_ 3.使用编辑器，编译并执行程序。
 
     div#ide
         pre.initcode
@@ -298,7 +299,7 @@ _{button.next-step} Continue_
 
 > id: chaining
 
-现在，我们已经输出了一个变量，并且还使用 _{code}couts_ 输出了多个值。让我们再仔细看看 _{code}cout_ 。
+现在，我们已经输出了一个变量，并且还使用 _{code}cout_ 输出了多个值。让我们再仔细看看 _{code}cout_ 。
 
 如果我们有以下代码：
 
@@ -352,7 +353,7 @@ Player score: [score]
 
 检查两遍，就可以通过了
 
-_{input#chaining(type="checkbox" disabled="disabled")}_ 2.使用终端编译并执行程序。
+_{input#chaining(type="checkbox" disabled="disabled")}_ 2.使用编辑器，编译并执行程序。
 
     div#ide
         pre.initcode
@@ -401,9 +402,9 @@ _{code}[tip]_ 应该是 变量 _{code}tip_ 的值。
 
 确保将新的一行，添加到了输出端。
 
-_{input#userinput(type="checkbox" disabled="disabled")}_ 3.我们使用终端，编译、并执行我们的程序。
+_{input#userinput(type="checkbox" disabled="disabled")}_ 3.我们使用编辑器，编译、并执行我们的程序。
 
-然后，我们的终端应该是这个样子：
+然后，我们的编辑器应该是这个样子：
 
 ```c++
 $ g++ tip.cpp
@@ -411,7 +412,7 @@ $ ./a.out
 Enter a tip amount: 
 ```
 
-在我们的终端上，输入一个数字，然后按 _{code}enter_ 结束。
+在我们的编辑器上，输入一个数字，然后按 _{code}enter_ 结束。
 
     div#ide
         pre.initcode
@@ -460,7 +461,7 @@ The temp is [tempc] degrees Celsius.
 
 不要忘记，在这句话最后面，加一个换行符 _{code}\n_ ，这个是让我们的数据，单独占据一行。
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.使用终端（黑窗口），编译并执行我们的程序。
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.使用编辑器，编译并执行我们的程序。
 
     div#ide
         pre.initcode
@@ -492,7 +493,7 @@ And get their input using _{code}std::cin_ and store it in _{code}tempf_.
 
 检查两遍，可以通过了。
 
-_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.使用终端，编译并执行程序。
+_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.使用编辑器，编译并执行程序。
 
     div#ide
         pre.initcode

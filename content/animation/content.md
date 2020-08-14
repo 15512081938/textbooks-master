@@ -33,111 +33,70 @@
 > section: interactive-lesson-introduction-to-animation-first
 > id: interactive-lesson-introduction-to-animation-first
 
-#### 带Play按钮和拖拽的Bar
-
-    <!-- +int-grid(10) -->
-    
-    svg#int-grid.content-center(width=350 height=350)
-      image(id="bucket" xlink:href="images/empty_bucket.png" x="0" y="0" height="100%" width="100%")
-      image(id="ball-1" class="ball" xlink:href="images/ball.svg" x="80" y="246" height="50px" width="50px")
-      image(id="ball-2" class="ball" xlink:href="images/ball.svg" x="125" y="246" height="50px" width="50px")
-      image(id="ball-3" class="ball" xlink:href="images/ball.svg" x="170" y="246" height="50px" width="50px")
-      image(id="ball-4" class="ball" xlink:href="images/ball.svg" x="215" y="246" height="50px" width="50px")
-      image(id="ball-5" class="ball" xlink:href="images/ball.svg" x="61" y="195" height="50px" width="50px")
-      image(id="ball-6" class="ball" xlink:href="images/ball.svg" x="102.5" y="209" height="50px" width="50px")
-      image(id="ball-7" class="ball" xlink:href="images/ball.svg" x="147.5" y="209" height="50px" width="50px")
-      image(id="ball-8" class="ball" xlink:href="images/ball.svg" x="192.5" y="209" height="50px" width="50px")
-      image(id="ball-9" class="ball" xlink:href="images/ball.svg" x="236.3" y="206" height="50px" width="50px")
-      image(id="ball-10" class="ball" xlink:href="images/ball.svg" x="93.3" y="166" height="50px" width="50px")
-      image(id="ball-11" class="ball" xlink:href="images/ball.svg" x="136.3" y="166.5" height="50px" width="50px")
-      image(id="ball-12" class="ball" xlink:href="images/ball.svg" x="180" y="166.8" height="50px" width="50px")
-      image(id="ball-13" class="ball" xlink:href="images/ball.svg" x="223.3" y="164" height="50px" width="50px")
-
-    x-slider#slider-int(steps=13)
-
-#### int
-
-当前Bar的位置：${barCurrentInt}
-
-当前整型的值为：__${intValue}__
-
-<hr />
-
-    <!-- svg#float-grid.content-center(width=350 height=350) -->
-      <!-- image(id="bucket" xlink:href="images/empty_bucket.png" x="0" y="0" height="100%" width="100%") -->
-      <!-- image(id="wave" class="wave" xlink:href="images/wave.png" x="0" y="100" height="100%" width="100%") -->
-      <!-- rect(class="wave" x="50" y="20" height="50" width="50" style="fill:blue; opacity:0.5") -->
-
-    div#float-grid.content-center(style="position:relative; width:350px; height:350px; background-image: url(images/empty_bucket.png);background-attachment: local; background-position: center; background-repeat: no-repeat; background-size: 100% 100%;")
-        div.wave(style="top: 90%; width: 47%; height: 0%;")
-
-    x-slider#slider-float(steps=100)
-
-#### float
-
-当前Bar的位置：${barCurrentFloat}
-
-当前水的位置：__${floatValue}__
-
-<hr />
-
-    <!-- +string-grid("CAMLUNI") -->
-
-    svg#string-grid.content-center(width=350 height=350)
-      image(id="bucket" xlink:href="images/empty_bucket.png" x="0" y="0" height="100%" width="100%")
-      text(id="string-1" x="165" y="215" fill="darkgrey" style="font-size: xx-large;")
-
-    x-slider#slider-string(steps=7)
-
-#### string
-
-当前Bar的位置：${barCurrentString}
-
-当前字符串的值为：__${stringValue}__
-
-<hr />
-
-    svg#boolean-grid.content-center(width=350 height=350)
-      image(id="bucket" xlink:href="images/empty_bucket.png" x="0" y="0" height="100%" width="100%")
-      image(id="true-lamp" class="hide-lamp" xlink:href="images/true_lamp.png" x="25" y="40" width=300 height=265 alert="True")
-      image(id="false-lamp" class="show-lamp" xlink:href="images/false_lamp.png" x="25" y="40" width=300 height=265 alert="True")
-
-    <!-- div.testswitch
-        input#onoffswitch.testswitch-checkbox(type="checkbox")
-        lable.testswitch-label(for="onoffswitch")
-            span.testswitch-inner(data-on="ON" data-off="OFF")
-            span.testswitch-switch -->
-    <div class="content-center">
-    <div class="testswitch">
-        <input class="testswitch-checkbox" id="onoffswitch" type="checkbox">
-        <label class="testswitch-label" for="onoffswitch">
-            <span class="testswitch-inner" data-on="开" data-off="关"></span>
-            <span class="testswitch-switch"></span>
-        </label>
+    <div class="content-center" style="display: flex;">
+        <!-- int -->
+        <div style="flex: 1;">
+            svg#int-grid.content-center(width=350 height=350)
+                image(id="bucket" xlink:href="images/back-img-3.png" x="0" y="0" height="100%" width="100%")
+                <!-- image(id="ball-1" class="ball" xlink:href="images/ball.svg" x="43" y="130" height="35px" width="35px") -->
+                image(id="ball-1" class="ball" xlink:href="images/ball-1.png" x="43" y="123" height="35px" width="35px")
+                image(id="ball-2" class="ball" xlink:href="images/ball-1.png" x="73" y="123" height="35px" width="35px")
+                image(id="ball-3" class="ball" xlink:href="images/ball-1.png" x="103" y="123" height="35px" width="35px")
+                image(id="ball-4" class="ball" xlink:href="images/ball-1.png" x="125" y="102" height="35px" width="35px")
+                image(id="ball-5" class="ball" xlink:href="images/ball-1.png" x="58" y="97" height="35px" width="35px")
+                image(id="ball-6" class="ball" xlink:href="images/ball-1.png" x="88" y="97" height="35px" width="35px")
+                image(id="ball-7" class="ball" xlink:href="images/ball-1.png" x="28" y="97" height="35px" width="35px")
+                image(id="ball-8" class="ball" xlink:href="images/ball-1.png" x="43" y="71" height="35px" width="35px")
+                image(id="ball-9" class="ball" xlink:href="images/ball-1.png" x="74" y="71" height="35px" width="35px")
+                image(id="ball-10" class="ball" xlink:href="images/ball-1.png" x="110" y="76" height="35px" width="35px")
+                <!-- image(id="ball-11" class="ball" xlink:href="images/ball-1.png" x="130" y="59" height="35px" width="35px")
+                image(id="ball-12" class="ball" xlink:href="images/ball-1.png" x="94" y="56" height="35px" width="35px")
+                image(id="ball-13" class="ball" xlink:href="images/ball-1.png" x="58" y="52" height="35px" width="35px")
+                image(id="ball-14" class="ball" xlink:href="images/ball-1.png" x="23" y="55" height="35px" width="35px") -->
+            <p id="p-int">x<sub>1</sub>&nbsp;=&nbsp;<span id="span-int"><strong>0</strong></span></p>  
+            x-slider#slider-int(steps=10)
+            <p>int</p>
+        </div>
+        <!-- float -->
+        <div style="flex: 1; position: relative;">            
+            svg.content-center(width=350 height=350)
+                <defs><clipPath id="clippath"><rect id="rect-float" x="0" y="156" width="100%" height="100%"></rect></clipPath></defs>
+                image(id="peaceWater" xlink:href="images/water.png" x="0" y="0" height="100%" width="100%" style="clip-path:url(#clippath);")
+                image(id="bucket" xlink:href="images/back-img-3.png" x="0" y="0" height="100%" width="100%")
+            <!-- <div id="float-grid">
+                <div class="wave" style="top: 48%; width: 47%; height: 0%;"></div>
+            </div> -->
+            <p>x<sub>2</sub>&nbsp;=&nbsp;<span><strong id="span-float">0.00</strong></span></p>
+            x-slider#slider-float(steps=1000)
+            <p>float</p>
+        </div>
+        <!-- string -->
+        <div style="flex:1;">
+            svg#string-grid.content-center(width=350 height=350)
+                <defs><clipPath id="clipstring"><rect id="rect" x="0" y="0" width="30%" height="100%"></rect></clipPath></defs>
+                image(id="bucket" xlink:href="images/back-img-3.png" x="0" y="0" height="100%" width="100%")
+                image(id="logo" class="logo" xlink:href="images/LOGO.png" x="32%" y="0" height="100%" width="100%" style="clip-path:url(#clipstring);")
+            <p>x<sub>3</sub>&nbsp;=&nbsp;<span><strong id="span-string">""</strong></span></p>
+            x-slider#slider-string(steps=7)
+            <p>string</p>
+        </div>
+        <!-- boolean -->
+        <div style="flex:1;">
+            svg#boolean-grid.content-center(width=350 height=350)
+                image(id="bucket" xlink:href="images/back-img-3.png" x="0" y="0" height="100%" width="100%")
+                image(id="true-lamp" class="hide-lamp" xlink:href="images/true_lamp.png" x="45" y="10" width=100 height=200 alert="True")
+                image(id="false-lamp" xlink:href="images/false_lamp.png" x="45" y="10" width=100 height=200 alert="True")
+            <p>x<sub>4</sub>&nbsp;=&nbsp;<span><strong id="span-boolean">False</strong></span></p>
+            <div class="testswitch">
+                <input class="testswitch-checkbox" id="onoffswitch" type="checkbox">
+                <label class="testswitch-label" for="onoffswitch">
+                    <span class="testswitch-inner" data-on="开" data-off="关"></span>
+                    <span class="testswitch-switch"></span>
+                </label>
+            </div>
+            <p>boolean</p>
+        </div>
     </div>
-    </div>
-
-    <!-- x-slider#slider-boolean(steps=20) -->
-
-#### boolean
-
-当前Bar的位置：${barCurrentBoolean}
-
-当前的值为：__${booleanValue}__
-
-<hr />
-
-__m1__ 实时结果: ${m1}
-
-当前Bar的宽度为：${barSteps}
-
-<hr />
-
-#### 带数值的Bar
-
-这里是变量__n1__: ${n1}{n1|0|0,10,1} 。
-
-__n1__ 实时结果：${n1}
 
 <hr />
 

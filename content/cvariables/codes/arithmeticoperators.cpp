@@ -1,13 +1,12 @@
 #include <iostream>
+using namespace std;
 
 int main() {
 
-  int score = 0;
+  int score = 45;
 
   // Change score here:
-  score=1234*99;
-  std::cout<< score<<"\n";
+  score=45 + 5;
+  cout<< score <<"\n";
   
-
-
 }

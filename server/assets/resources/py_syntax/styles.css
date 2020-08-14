@@ -1,0 +1,216 @@
+@import "../shared/vendor/styles/monokai.css";
+.code_quote {
+  color: #15141f;
+  background-color: #eae9ed;
+  white-space: normal;
+  vertical-align: initial;
+  font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+  font-size: 0.9rem;
+}
+[dir] .code_quote {
+  padding: 0 0.25rem;
+  margin: 0 0.0625rem;
+  border-radius: 0.125rem;
+}
+article {
+  max-width: 100%;
+}
+.sidebar {
+  width: 200px;
+}
+[dir=ltr] body > .body {
+  padding: 0 40px 0 calc(200px + 40px);
+}
+[dir=rtl] body > .body {
+  padding: 0 calc(200px + 40px) 0 40px;
+}
+x-solid {
+  display: block;
+  position: relative;
+}
+[dir] x-solid {
+  margin: 0 auto;
+}
+x-solid canvas {
+  max-width: 100%;
+  height: auto;
+}
+x-solid .label3d {
+  position: absolute;
+  line-height: 1.2;
+  font-style: italic;
+  pointer-events: none;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.code {
+  background-color: #eee;
+  white-space: nowrap;
+}
+[dir] .code {
+  border-radius: 3px;
+  padding: 4px 6px 2px;
+  margin: -2px 1px;
+}
+[dir=ltr] .one-text {
+  -webkit-animation:  moveto1-ltr 3s 1 forwards;
+          animation:  moveto1-ltr 3s 1 forwards;
+}
+[dir=rtl] .one-text {
+  -webkit-animation:  moveto1-rtl 3s 1 forwards;
+          animation:  moveto1-rtl 3s 1 forwards;
+}
+@-webkit-keyframes moveto1-ltr {
+  from {
+    transform: translate(60, 60);
+  }
+  to {
+    transform: translate(350px, 120px);
+  }
+}
+@keyframes moveto1-ltr {
+  from {
+    transform: translate(60, 60);
+  }
+  to {
+    transform: translate(350px, 120px);
+  }
+}
+@-webkit-keyframes moveto1-rtl {
+  from {
+    transform: translate(-60, 60);
+  }
+  to {
+    transform: translate(-350px, 120px);
+  }
+}
+@keyframes moveto1-rtl {
+  from {
+    transform: translate(-60, 60);
+  }
+  to {
+    transform: translate(-350px, 120px);
+  }
+}
+[dir=ltr] .two-text {
+  -webkit-animation:  moveto2-ltr 3s 1 forwards;
+          animation:  moveto2-ltr 3s 1 forwards;
+}
+[dir=rtl] .two-text {
+  -webkit-animation:  moveto2-rtl 3s 1 forwards;
+          animation:  moveto2-rtl 3s 1 forwards;
+}
+@-webkit-keyframes moveto2-ltr {
+  from {
+    transform: translate(10, 30);
+  }
+  to {
+    transform: translate(350px, 70px);
+  }
+}
+@keyframes moveto2-ltr {
+  from {
+    transform: translate(10, 30);
+  }
+  to {
+    transform: translate(350px, 70px);
+  }
+}
+@-webkit-keyframes moveto2-rtl {
+  from {
+    transform: translate(-10, 30);
+  }
+  to {
+    transform: translate(-350px, 70px);
+  }
+}
+@keyframes moveto2-rtl {
+  from {
+    transform: translate(-10, 30);
+  }
+  to {
+    transform: translate(-350px, 70px);
+  }
+}
+[dir=ltr] .three-text {
+  -webkit-animation:  moveto3-ltr 3s 1 forwards;
+          animation:  moveto3-ltr 3s 1 forwards;
+}
+[dir=rtl] .three-text {
+  -webkit-animation:  moveto3-rtl 3s 1 forwards;
+          animation:  moveto3-rtl 3s 1 forwards;
+}
+@-webkit-keyframes moveto3-ltr {
+  from {
+    transform: translate(10, 30);
+  }
+  to {
+    transform: translate(350px, 30px);
+  }
+}
+@keyframes moveto3-ltr {
+  from {
+    transform: translate(10, 30);
+  }
+  to {
+    transform: translate(350px, 30px);
+  }
+}
+@-webkit-keyframes moveto3-rtl {
+  from {
+    transform: translate(-10, 30);
+  }
+  to {
+    transform: translate(-350px, 30px);
+  }
+}
+@keyframes moveto3-rtl {
+  from {
+    transform: translate(-10, 30);
+  }
+  to {
+    transform: translate(-350px, 30px);
+  }
+}
+[dir=ltr] .four-text {
+  -webkit-animation:  moveto4-ltr 3s 1 forwards;
+          animation:  moveto4-ltr 3s 1 forwards;
+}
+[dir=rtl] .four-text {
+  -webkit-animation:  moveto4-rtl 3s 1 forwards;
+          animation:  moveto4-rtl 3s 1 forwards;
+}
+@-webkit-keyframes moveto4-ltr {
+  from {
+    transform: translate(10, 30);
+  }
+  to {
+    transform: translate(350px, -20px);
+  }
+}
+@keyframes moveto4-ltr {
+  from {
+    transform: translate(10, 30);
+  }
+  to {
+    transform: translate(350px, -20px);
+  }
+}
+@-webkit-keyframes moveto4-rtl {
+  from {
+    transform: translate(-10, 30);
+  }
+  to {
+    transform: translate(-350px, -20px);
+  }
+}
+@keyframes moveto4-rtl {
+  from {
+    transform: translate(-10, 30);
+  }
+  to {
+    transform: translate(-350px, -20px);
+  }
+}
