@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪吃蛇-自己写的(第一遍)</title>
+	<style>*{margin:0;}</style>
+</head>
+<body>
+<script>
+	//三个对象： 地图m  食物f  蛇s    以下 _element的 都代表这个标签
+	// 地图
+	function M() {
+		//属性： 宽高背景颜色 属性
+		this.width = 600;
+		this.height = 400;
+		this.backgroundColor = 'pink';
+		this.map_element = null;
+
+		this.margin = 'auto';
+		this.position = 'relative';
+		this.marginTop = 50;
+		this.borderRadius = 0.1;
+		// 方法：显示地图
+		if (!M.prototype.show) {
+			M.prototype.show = function () {
+				var map_div = document.createElement('div');
+				map_div.style.width = this.width + 'px';
+				map_div.style.height = this.height + 'px';
+				map_div.style.backgroundColor = this.backgroundColor;
+				map_div.style.position = this.position;
+				map_div.style.margin = 'auto';
+				map_div.style.marginTop = this.marginTop + 'px' ;
+				map_div.style.borderRadius = this.borderRadius * this.height + 'px' ;
+				document.body.appendChild(map_div);
+				this.map_element = map_div;
+			}
+		}
+	}
+	var map = new M();
+	map.show();
+
+	// 食物
+	function F(map) {
+		 // 属性 宽高背景xy定位 属性
+		 this.width = 20;
+		 this.height = 20;
+		 this.backgroundColor = 'green';
+		 this.position = 'absolute';
+		 this.x = 0;
+		 this.y = 0;
+		 this.food_element = null;
+
+		 this.borderRadius = 0.5;
+		 // 方法 位置变化
+		 if (!F.prototype.show) {
+		 	F.prototype.show = function () {
+		 		if (!this.food_element) {
+		 			var food_div = document.createElement('div');
+			 		food_div.style.width = this.width + 'px';
+			 		food_div.style.height = this.height + 'px';
+			 		food_div.style.backgroundColor = this.backgroundColor;
+			 		food_div.style.position = this.position;
+			 		food_div.style.borderRadius =  this.borderRadius * this.width + 'px';
+			 		map.map_element.appendChild(food_div);
+			 		this.food_element = food_div;
+		 		}
+		 	this.x = Math.floor(Math.random() * (map.width/this.width));
+		 	this.y = Math.floor(Math.random() * (map.height/this.height));
+		 	this.food_element.style.left = this.x * this.width + 'px';
+		 	this.food_element.style.top = this.y * this.height + 'px';
+		 	}
+		 	
+		 }
+	}
+	var food = new F(map);
+	food.show();
+
+	// 蛇 
+	// 两部分 头+身体 用数组存放 位置 颜色 对象 
+	// 宽高定位 可以改变方位
+	function S() {
+		// 属性   [x,y,bgc,s_element]
+		this.body = [[5,3,'red',null],[4,3,'blue',null],[3,3,'blue',null]];
+		this.width = 20;
+		this.height = 20;
+		this.position = 'absolute';
+		this.direction = 'right';
+		this.change = false;
+
+		this.borderRadius = 0.5;
+		// 方法
+		// 显示蛇
+		if (!S.prototype.show) {
+			S.prototype.show = function() {
+				// 创建每一节身体，用遍历
+				for(var i = 0; i <this.body.length ;i++){
+					if (!this.body[i][3]) {
+						var div_snake = document.createElement('div');
+						div_snake.style.width = this.width + 'px';
+						div_snake.style.height = this.height + 'px';
+						div_snake.style.position = this.position;
+						map.map_element.appendChild(div_snake);
+						// 注意其中的二维数组的表示内容
+						this.body[i][3] = div_snake;
+					}
+					// 都是通过标签修改属性
+					this.body[i][3].style.backgroundColor = this.body[i][2];
+					this.body[i][3].style.top = this.body[i][1] * this.width + 'px';
+					this.body[i][3].style.left = this.body[i][0] * this.height + 'px';
+					this.body[0][3].style.borderRadius = this.borderRadius * this.width + 'px';
+					this.body[i][3].style.borderRadius = 0.3 * this.width + 'px';
+				}
+				this.change = true; //是否可以改变方位
+			}
+			// 蛇移动事件
+			// 蛇头控制方位，蛇身每一节变成前一节坐标
+			S.prototype.move = function () {
+				// 修改处了蛇头的坐标，遍历蛇身
+				// 因为从蛇尾开始，所以初始值从蛇尾(最大值)开始
+				for (var i = this.body.length-1 ;i>0; i--) {
+					this.body[i][0] = this.body[i-1][0];
+					this.body[i][1] = this.body[i-1][1];
+				}
+				// 用方向direction判断蛇头的坐标(上下左右)来修改蛇尾xy值
+				if (this.direction == 'up') {
+					this.body[0][1] = this.body[0][1] - 1;
+				}else if(this.direction == 'down') {
+					this.body[0][1] = this.body[0][1] + 1;
+				}else if(this.direction == 'left'){
+					this.body[0][0] = this.body[0][0] - 1;
+				}else if(this.direction == 'right'){
+					this.body[0][0] = this.body[0][0] + 1;
+				}
+				//判断 边界条件
+				if (this.body[0][0] <0 ||this.body[0][0] >=(map.width/food.width) ||this.body[0][1] <0 || this.body[0][1] >=(map.height/food.height)) {
+					clearInterval(timer);
+					alert('游戏结束 您的分数为:'+res);
+					if (confirm('确认要重新开始吗？')) {
+						location.reload();
+					}else {
+						return;
+					}
+				}
+				//判断 蛇头是否撞自己
+			// 错误：下标从1开始，不能包含自己了，不然自己会重合
+				for(var i = 1;i <this.body.length ;i++){
+					if (this.body[0][0] == this.body[i][0] && this.body[0][1] == this.body[i][1]) {
+					clearInterval(timer);
+					alert('游戏结束 您的分数为:'+res);
+					if (confirm('确认要重新开始吗？')) {
+						location.reload();
+					}else {
+						return;
+					}
+					}
+				}
+				//重新显示
+				this.show();
+
+				// 判断 吃到东西
+				if (this.body[0][0] == food.x && this.body[0][1] == food.y) {
+					this.body[this.body.length] = [1,1,'blue',null]; //这个值随便
+					// 刷新食物
+					food.show();
+					if (t > 200) {
+						t = t - 50;
+						res++;
+						T();
+					}
+				}
+				// 吃完的食物就不会和蛇重合了
+				for (var i = 0; i < this.body.length; i++) {
+					if (food.x == this.body[i][0] && food.y == this.body[i][1].y) {
+		 		     return;
+		 		    }
+				}
+
+			}
+		}
+	}
+	var snake = new S();
+	snake.show();
+
+	// 计时器让蛇移动
+	var timer;
+	var t = 300;
+	var res = 0;
+	function T () {
+		// 先清除计时器，在重新加载计时器，本身没啥，就是为了前面的snake.move 调用重新加载
+		clearInterval(timer);
+	 	timer = setInterval(function(){
+			snake.move();
+		}, t);
+	 } 
+	 T();
+
+	 // 控制蛇的拐弯
+	 window.onkeyup = function  (e) {
+	 	var evt = e || window.event;
+	 	// 如果蛇的改变存在时，则不执行；否则将返回原来的改变值
+	 	if (!snake.change) {
+	 		return;
+	 	}
+	 	if(e.keyCode == 37 && snake.direction != 'right'){
+			snake.direction = 'left';
+	 	}else if(e.keyCode == 38 && snake.direction != 'down'){
+			snake.direction = 'up';
+		}else if(e.keyCode == 39 && snake.direction != 'left'){
+			snake.direction = 'right';
+		}else if(e.keyCode == 40 && snake.direction != 'up'){
+			snake.direction = 'down';
+		}
+		snake.change = false;
+	 }
+</script>
+</body>
+</html>

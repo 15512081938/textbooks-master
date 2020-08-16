@@ -1,12 +1,13 @@
 #include <iostream>
+using namespace std;
 
 int main() {
   
-  int tip = 0;
+  int age = 0;
   
-  std::cout << "Enter tip amount: ";
+  cout << "请输入你的年龄吧: ";
   
-  std::cin >> tip;
+  cin >> tip;
   
-  
+  cout << tip;
 }

@@ -5,6 +5,7 @@
 > id: introductiontovariables
 > section: introductiontovariables
 
+    <!-- include svg/贪吃蛇.html -->
 
 经过我们上一堂课的讲解，小伙伴们都应该知道了，C++的一些历史信息，能做好多好多有趣的事情。
 
@@ -406,51 +407,44 @@ _{input#chaining(type="checkbox" disabled="disabled")}_ 2.写完后，点击编�
 > id: userinput
 > section: userinput
 
-就像我们在介绍中提到的变量，它们的值是通过我们在键盘上敲一些字符，才得到的，这个就是我们提到的用户输入。
+经过上面的学习，我们发现，我们看到的数据，都是通过我们在代码区，写好了展示出来的。
 
-我们在键盘上输入了一些字符后，通过按下 _{code}enter_ 键，我们的程序就能收到，它就能做其他的操作了。
+接下来，我们来实现一下，在键盘上输入一些数据，并将它展示出来。
 
-我们在前面也看到过了，C++是通过 _{code}cout_ 来输出我们想要的数据，而通过 _{code}cin_ 是我们输入的数据，或者说我们想让变量成为我们设定的值。
+同学们，我们玩游戏之前，是不是需要给自己起一个好听的名字，用来记录下我们的成绩啊？下面的贪吃蛇就是这样：
+
+::: column(width=600)
+    x-img(src="images/tname.jpg" width=600 height=400)
+:::
+
+而C++中，我们知道了，可以使用 _{code}cout_ 来输出数据；那输入数据怎么实现呢，是通过 _{code}cin_ ，下面就是一个例子。
 
 ```c++
-std::cout << "Enter your password: ";
-std::cin >> password;
+cout << "请输入您的用户名: ";
+cin >> name;
 ```
 
- _{code}cin_ 这个单词，代表的就是标准的输入流，也就是说，我们想要输入的数据能让计算机读懂，需要通过它来表示出来（它的读音，就是 see-in 这样读）。通常来说，我们如果有 _{code}cin_ ，就需要后面跟着一个 _{code}>>_ 符号，它的作用呢，就是为了起到了，为了给输入的数据，指定一个位置
+此时，应该有人发现了 _{code}cin_ （读音：see-in）  后面跟着一个 _{code}>>_ ，它就代表着，每次输入一个数据，就给它保存起来。输入完成后，你可以按一下 _{code}enter_ 这样就完成了我们的输入啦。 
 
-想知道它的工作原理吗？想知道的话，我们就要使用一下这个程序。
 
 ##### 使用说明
-_{input#userinput(type="checkbox" disabled="disabled")}_ 1.将下面的代码在我们的编辑器中写入:
+
+
+_{input#userinput(type="checkbox" disabled="disabled")}_ 1.我们在设计一款贪吃蛇游戏，希望能知道玩家的年龄，此时就需要，开始的时候，给一个提示："请输入你的年龄吧: "，并且可以让玩家输入年龄。
 
 ```c++
-std::cin >> tip;
+cout << "请输入你的年龄吧: ";
+cin >> age;
 ```
 
-这样，用户在键盘上输入的一些数据，就通过 _{code}enter_ 让程序读到它。并且呢，我们现在有 _{code}tip_ 变量，数据类型为 _{code}int_ ,程序会将我们输入的数据，赋值给 _{code}tip_ 。
-
-_{input#userinput(type="checkbox" disabled="disabled")}_ 2.让我们通过链表，来将下面的数据，输出来。
+_{input#userinput(type="checkbox" disabled="disabled")}_ 2.当玩家输入完成后，按下 _{code}enter_ 键，输出玩家的年龄。
 
 ```c++
-You paid [tip] dollars.
+12
 ```
 
-_{code}[tip]_ 应该是 变量 _{code}tip_ 的值。
+_{input#userinput(type="checkbox" disabled="disabled")}_ 3.写完程序后，点击编辑器的run，输入一个数字，然后按 _{code}enter_ 结束，查看一下结果。
 
-确保将新的一行，添加到了输出端。
-
-_{input#userinput(type="checkbox" disabled="disabled")}_ 3.我们使用编辑器，编译、并执行我们的程序。
-
-然后，我们的编辑器应该是这个样子：
-
-```c++
-$ g++ tip.cpp
-$ ./a.out
-Enter a tip amount: 
-```
-
-在我们的编辑器上，输入一个数字，然后按 _{code}enter_ 结束。
 
     div#ide
         pre.initcode
@@ -466,13 +460,11 @@ Enter a tip amount:
 > id: challengetemperature1
 > section: challengetemperature1
 
-现在，相信同学们已经了解了变量，以及 _{code}cin_ 输入流。有这些基础，我们就可以编写一个程序啦！
-
 曾经，有位疯狂的科学家，叫开尔文（Kelvin），有一次，他在山腰的气象实验室里，熟练地预测了天气。
 
 最近，开尔文（Kelvin）开始在他的网站上，发布了天气预报，但是存在一个问题：他的所有天气预报，都以华氏（F）温度为单位，进行描述。
 
-我们通常说温度，都是用的摄氏（C），很少有人能把华氏转换成摄氏。那么，我们通过计算机就可以实现这个过程。
+我们通常说温度，都是用的摄氏（C）。那么，我们通过计算机来实现它们的转换吧。
 
 让我们将温度从华氏（F）转换为摄氏（C），是有个公式的。公式如下：
 
@@ -480,27 +472,21 @@ C=(F−32)/1.8
 
 ##### 使用说明
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  1.首先，我们使用谷歌或者百度，看一下现在，北京的温度，是多少华氏温度的。
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  1.首先，我们使用百度，查一下，此时此刻，北京的温度，是多少华氏温度的，并记下来。
 
-声明一个名称为 _{code}tempf_ 数据类型为 _{code}double_ 的变量，并让它做为温度的代表，对它做一个初始化。
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  2.此时我们需要两个变量，华氏温度（ _{code}f_ ）和摄氏温度（ _{code}c_ ）。因为温度，有可能是小数，所以我们采用 _{code}double_ 类型。
 
-声明另一个，名称为 _{code}tempc_ 数据类型为 _{code}double_ 的变量，
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  3.将华氏温度（ _{code}f_ ），转换成摄氏温度（ _{code}c_ ），并且用摄氏温度保存变量的值。
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  2.将华氏温度，转换成摄氏温度。
-
-并且要讲摄氏温度的值，存到 _{code}tempc_ 里。
-
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  3.展示这个结果。
-
-输出以下内容:
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.我们需要展示成下面这句话。
 
 ```c++
-The temp is [tempc] degrees Celsius.
+此时的温度是 [c] 摄氏度。
 ```
 
-不要忘记，在这句话最后面，加一个换行符 _{code}\n_ ，这个是让我们的数据，单独占据一行。
+我们可以在这句话之后输入一个换行符 _{code}\n_ ，它可以让我们的数据，单独占据一行哦~
 
-_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.使用编辑器，编译并执行我们的程序。
+_{input#challengetemperature1(type="checkbox" disabled="disabled")}_  5.写完程序后，点击编辑器的run，查看结果。
 
     div#ide
         pre.initcode
@@ -516,30 +502,27 @@ _{input#challengetemperature1(type="checkbox" disabled="disabled")}_  4.使用�
 > id: challengetemperature2
 > section: challengetemperature2
 
-让我们回到我们刚刚写过的 **temperature.cpp** 。我们不要像下面这样，直接赋值给 _{code}tempf_ 一个温度值。
+在上面的例子中，我们假设，查到了北京的华氏温度，为80。那么我们就需要，直接赋值给华氏温度变量  _{code}f_ 。如下代码：
 
 ```c++
-tempf = 83;
+f = 80;
 ```
 
-让我们使用 _{code}cin_ 来输入一个当前温度值!
+现在我们需要改进上面的程序，需要在运行结果窗口，来输入一个值 ，赋值给华氏温度变量  _{code}f_ ，同学们想一想，怎么实现呢？
+
+**温馨提示**： 我们可以适当的加一些提示语，如 “请输入一个华氏温度值：” 
 
 ##### 使用说明
 
-_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 1.使用 _{code}std::cout_ 作为一个提示，告诉用户 “输入一个华氏温度”。
+_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 1.我们在运行结果窗口，加一个提示语 “请输入一个华氏温度值：” ，并且需要输入这个华氏温度值。
 
-And get their input using _{code}std::cin_ and store it in _{code}tempf_.
-然后使用 _{code}std::cin_ 来获取他们输入的值，并将这个值存储在 _{code}tempf_ 中。
+_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 3.写完程序后，点击编辑器的run，输入一个数字，然后按 _{code}enter_ 结束，查看一下结果。
 
-检查两遍，可以通过了。
-
-_{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.使用编辑器，编译并执行程序。
 
     div#ide
         pre.initcode
             include codes/challengetemperature2.cpp
         iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
-
 
 
 ---
@@ -549,14 +532,13 @@ _{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.使用编
 > id: review
 > section: review
 
-
-恭喜你，你已经完成了本课的学习。为你鼓鼓掌。🙌
+恭喜你，你已经完成了 **变量** 的学习。为你鼓鼓掌。🙌
 
 我们来做一下课前的回顾吧：
 
-- 一个变量，在计算机中，是占用一块特定内存的。而且占用了内存之后，就可以做一些其他的操作，比如存储值，使用这个数据等等。
+- 变量，就好比一个 “ 容器 ” ，而变量的数据，就需要盛放在 “ 容器 ” 中。
 
-- C ++基本数据类型包括：
+- 需要我们现在掌握的，C++基本数据类型：
   
 _{code}int_ : 整型
 
@@ -564,29 +546,21 @@ _{code}double_ : 浮点数（我们俗称的小数）
 
 _{code}char_ : 单个字符
 
-_{code}string_ : 多个字符组成的串
+- 一个等号 _{code}=_ 表示赋值。将右边的值，赋值给左边的变量。它并不是数学意义上的相等。
 
-_{code}bool_ : 逻辑型（正确/错误）
+- _{code}cin_ 可以让用户输入数据，并且要搭配 _{code}>>_ 。
 
-- 一个等号 _{code}=_ 表示赋值，而不是数学意义上的相等。
+##### 附加题：
 
-- _{code}cin_ 是可以从用户的输入来获取数据。
-
-##### 使用说明
-
-_{input#review(type="checkbox" disabled="disabled")}_ 1.附加题：我们身体是不是健康的呢？我们都不确定，有的人说很健康，有的人却不健康，我们如果要科学的定义我们的身体健康程度，有一个词，大家应该了解一下，那这个词就是 “身体质量指数（BMI）” 。这个词呢，可以用来检测我们人体的脂肪的。
+我们身体是不是健康的呢？我们都不确定，有的人说很健康，有的人却不健康，我们如果要科学的定义我们的身体健康程度，有一个词，大家应该了解一下这个词 ——— “身体质量指数（BMI）” 。BMI是一个，规范我们人体脂肪的标准公式。
 
 这个词呢，是有一个公式的，如下所示：
 
-
     x-img(src="images/bmi.png" width=450 height=270)
-
 
 它将通过人的体重（我们一般说人的体重是多少公斤，也就是多少kg，而这里就是使用了kg，作为单位），除以我们的 _{code}身高的平方_ 来计算（身高是用 m 来做计算的）。
 
-完成 **bmi.cpp** 程序。
-
-(你也可以直接运行该代码，我们为你提供了源代码)
+完成下面的程序(你也可以直接运行该代码，我们为你提供了源代码)。
 
     div#ide
         pre.initcode

@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 int main() {
   
@@ -6,21 +7,14 @@ int main() {
   
   // Ask user for their height
   
-  std::cout << "Type in your height (m): ";
-  std::cin >> height;
+  cout << "Type in your height (m): ";
+  cin >> height;
   
   // Now ask the user for their weight and calculate BMI
-  std::cout << "Type in your weight(kg): ";
-  std::cin >> weight;
+  cout << "Type in your weight(kg): ";
+  cin >> weight;
 
   bmi=weight/height*height;
-  
-  
-  
-  
-  
-  
-  
   
   
   return 0;

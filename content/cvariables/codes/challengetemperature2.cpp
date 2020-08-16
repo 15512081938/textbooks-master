@@ -1,16 +1,15 @@
 #include <iostream>
+using namespace std;
 
 int main() {
   
-  double tempf;
-  double tempc;
+  double f;
+  double c;
   
   // Ask the user
   
+  c = (f - 32) / 1.8;
   
-  
-  tempc = (tempf - 32) / 1.8;
-  
-  std::cout << "The temp is " << tempc << " degrees Celsius.\n";
+  cout << "此时的温度是 " << c << " 摄氏度。\n";
   
 }
