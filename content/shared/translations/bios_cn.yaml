@@ -682,6 +682,20 @@ karinthy:
   name: Karinthy
   bio: __Frigyes Karinthy__（1887年-1938年）是匈牙利作家，诗人和新闻工作者。他以1929年的短篇小说“ Chains”而闻名，该短篇小说首次引入了_六个分离度_的概念。
 
+kelvin:
+  name: Kelvin
+  full: Lord Kelvin
+  born: 1824
+  died: 1907
+  bio: | 
+    __Lord Kelvin__ (1824年-1907年) , British physicist and inventor. 
+    Kelvin’s scientific activities are multifaceted. 
+    His main contributions to physics are in electromagnetics and thermodynamics. 
+    Is one of the main founders of thermodynamics. 
+    The name is Kelvin based on the inventor's title, and the symbol is K, but no "°" is added to indicate temperature. 
+    In 1927, the Seventh International Conference on Metrology adopted thermodynamic temperature scale as the most basic temperature scale.
+
+
 kepler:
   name: 开普勒
   born: 1571

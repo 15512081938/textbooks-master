@@ -1171,6 +1171,19 @@ karinthy:
     journalist. He is best known for the 1929 short story “Chains”, which first
     introduced the concept of _six degrees of separation_.
 
+kelvin:
+  name: Kelvin
+  full: Lord Kelvin
+  born: 1824
+  died: 1907
+  bio: | 
+    __Lord Kelvin__ (1824 – 1907) 开尔文（Lord Kelvin 1824～1907），英国物理学家、发明家。
+    开尔文参加过各种各样的的科学活动。
+    他对物理学的主要贡献在电磁学和热力学方面。
+    他是热力学的主要奠基者之一。
+    其命名依发明者头衔为Kelvin，符号是K，但不加 “°” 来表示温度。
+    1927年，第七届国际计量大会将热力学温标作为最基本的温标。
+
 kepler:
   name: Kepler
   full: Johannes Kepler

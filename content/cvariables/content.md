@@ -460,7 +460,7 @@ _{input#userinput(type="checkbox" disabled="disabled")}_ 3.写完程序后，点
 > id: challengetemperature1
 > section: challengetemperature1
 
-曾经，有位疯狂的科学家，叫开尔文（Kelvin），有一次，他在山腰的气象实验室里，熟练地预测了天气。
+曾经，有位疯狂的科学家，叫开尔文（ [Kelvin](bio:kelvin) ），有一次，他在山腰的气象实验室里，熟练地预测了天气。
 
 最近，开尔文（Kelvin）开始在他的网站上，发布了天气预报，但是存在一个问题：他的所有天气预报，都以华氏（F）温度为单位，进行描述。
 
