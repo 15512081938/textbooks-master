@@ -148,6 +148,7 @@ var StepFunctions = (function (exports) {
             return fallback;
         }
     }
+    //# sourceMappingURL=utilities.js.map
 
     // =============================================================================
     // Core.ts | Array Functions
@@ -245,6 +246,7 @@ var StepFunctions = (function (exports) {
     function join(...arrays) {
         return arrays.reduce((a, x) => a.concat(x), []);
     }
+    //# sourceMappingURL=arrays.js.map
 
     // =============================================================================
     /** Splits a string into space separated words. */
@@ -258,6 +260,7 @@ var StepFunctions = (function (exports) {
         return str.toLowerCase().replace(/^-/, '')
             .replace(/-(.)/g, (_, g) => g.toUpperCase());
     }
+    //# sourceMappingURL=strings.js.map
 
     // =============================================================================
     /** Base class for event management. */
@@ -300,6 +303,7 @@ var StepFunctions = (function (exports) {
             }
         }
     }
+    //# sourceMappingURL=events.js.map
 
     // ============================================================================
     // Fermat.js | Utility Functions
@@ -376,6 +380,7 @@ var StepFunctions = (function (exports) {
     function square(x) {
         return x * x;
     }
+    //# sourceMappingURL=arithmetic.js.map
 
     // ============================================================================
     /**
@@ -397,6 +402,7 @@ var StepFunctions = (function (exports) {
         }
         return result;
     }
+    //# sourceMappingURL=combinatorics.js.map
 
     // ============================================================================
     /** Checks if a number n is prime. */
@@ -416,6 +422,7 @@ var StepFunctions = (function (exports) {
         }
         return true;
     }
+    //# sourceMappingURL=number-theory.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -781,6 +788,7 @@ var StepFunctions = (function (exports) {
         }
         return results;
     }
+    //# sourceMappingURL=geometry.js.map
 
     // =============================================================================
     var Matrix;
@@ -948,6 +956,7 @@ var StepFunctions = (function (exports) {
         }
         Matrix.inverse = inverse;
     })(Matrix || (Matrix = {}));
+    //# sourceMappingURL=matrix.js.map
 
     // ============================================================================
     var Random;
@@ -1104,6 +1113,7 @@ var StepFunctions = (function (exports) {
         }
         Random.chiCDF = chiCDF;
     })(Random || (Random = {}));
+    //# sourceMappingURL=random.js.map
 
     // =============================================================================
     var Regression;
@@ -1254,6 +1264,7 @@ var StepFunctions = (function (exports) {
         }
         Regression.find = find;
     })(Regression || (Regression = {}));
+    //# sourceMappingURL=regression.js.map
 
     // =============================================================================
     /** Converts a JSON object to an HTML query string. */
@@ -1340,6 +1351,7 @@ var StepFunctions = (function (exports) {
     const doDeferredPost = throttle(sendPostData, 5000);
     window.addEventListener('online', doDeferredPost);
     window.onbeforeunload = sendPostData;
+    //# sourceMappingURL=ajax.js.map
 
     // =============================================================================
     // Boost.js | Expression Parsing
@@ -1757,6 +1769,7 @@ var StepFunctions = (function (exports) {
             }).join('');
         };
     }
+    //# sourceMappingURL=eval.js.map
 
     // =============================================================================
     const touchSupport = ('ontouchstart' in window);
@@ -2212,6 +2225,7 @@ var StepFunctions = (function (exports) {
             $el._el.removeEventListener(event, fn);
         }
     }
+    //# sourceMappingURL=events.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -2394,6 +2408,7 @@ var StepFunctions = (function (exports) {
         }
         return points;
     }
+    //# sourceMappingURL=svg.js.map
 
     // =============================================================================
     // Boost.js | Canvas Drawing
@@ -2441,6 +2456,7 @@ var StepFunctions = (function (exports) {
         if (options.stroke)
             ctx.stroke();
     }
+    //# sourceMappingURL=canvas.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -3439,6 +3455,7 @@ var StepFunctions = (function (exports) {
     }
     const $body = new WindowView(document.body);
     const $html = new WindowView(document.documentElement);
+    //# sourceMappingURL=elements.js.map
 
     // =============================================================================
     const KEY_CODES = {
@@ -3683,6 +3700,7 @@ var StepFunctions = (function (exports) {
             });
         });
     }
+    //# sourceMappingURL=browser.js.map
 
     // =============================================================================
     // Prevent animations on page load.
@@ -3966,6 +3984,7 @@ var StepFunctions = (function (exports) {
         animation.promise.then(() => remove ? $el.remove() : $el.hide());
         return animation;
     }
+    //# sourceMappingURL=animate.js.map
 
     // =============================================================================
     function getViewParams(url, view) {
@@ -4182,6 +4201,7 @@ var StepFunctions = (function (exports) {
         forward() { window.history.forward(); }
     }
     const RouterInstance = new Router();
+    //# sourceMappingURL=router.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -4297,6 +4317,7 @@ var StepFunctions = (function (exports) {
             window.customElements.define(tagName, Constructor);
         };
     }
+    //# sourceMappingURL=webcomponents.js.map
 
     // =============================================================================
     // Hilbert.js | Expression Errors
@@ -4340,6 +4361,7 @@ var StepFunctions = (function (exports) {
             return new ExprError('SyntaxError', `This expression is invalid.`);
         }
     }
+    //# sourceMappingURL=errors.js.map
 
     // =============================================================================
     // Hilbert.js | Symbols
@@ -4480,6 +4502,7 @@ var StepFunctions = (function (exports) {
         '≥': 'is greater than or equal to',
         'π': 'pi'
     };
+    //# sourceMappingURL=symbols.js.map
 
     // =============================================================================
     /**
@@ -4572,6 +4595,7 @@ var StepFunctions = (function (exports) {
             return `<mo value="${op}">${op}</mo>`;
         }
     }
+    //# sourceMappingURL=elements.js.map
 
     // =============================================================================
     const PRECEDENCE = words('+ − * × · / ÷ // sup sub subsup');
@@ -4790,6 +4814,7 @@ var StepFunctions = (function (exports) {
         }
         collapse() { return collapseTerm(this.items).collapse(); }
     }
+    //# sourceMappingURL=functions.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -5055,6 +5080,7 @@ var StepFunctions = (function (exports) {
             throw ExprError.invalidExpression();
         return tokens[0];
     }
+    //# sourceMappingURL=parser.js.map
 
     // =============================================================================
     /** Parses a string to an expression. */
@@ -5094,6 +5120,7 @@ var StepFunctions = (function (exports) {
         numEquals,
         parse: cache(parse)
     };
+    //# sourceMappingURL=expression.js.map
 
     // =============================================================================
     const SQRT32 = Math.sqrt(3) / 2;
@@ -5134,6 +5161,7 @@ var StepFunctions = (function (exports) {
         }
         return dots;
     }
+    //# sourceMappingURL=polygons.js.map
 
     // =============================================================================
     const url = '/resources/shared/vendor/three-91.min.js';
@@ -5176,6 +5204,7 @@ var StepFunctions = (function (exports) {
             return { $canvas, camera, renderer, draw, onDraw, add };
         });
     }
+    //# sourceMappingURL=webgl.js.map
 
     // =============================================================================
     // Polyhedron Component
@@ -5452,6 +5481,7 @@ var StepFunctions = (function (exports) {
     Solid = Solid_1 = __decorate([
         register('x-solid')
     ], Solid);
+    //# sourceMappingURL=solid.js.map
 
     // =============================================================================
     const COLOURS = [0xff941f, 0xec7031, 0xd94c44, 0xc62857, 0xb30469]; // TODO New Colours
@@ -5485,6 +5515,7 @@ var StepFunctions = (function (exports) {
     Tetrahedron = __decorate([
         register('x-tetrahedron')
     ], Tetrahedron);
+    //# sourceMappingURL=tetrahedron.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -6077,6 +6108,7 @@ var StepFunctions = (function (exports) {
             });
         }
     }
+    //# sourceMappingURL=functions.js.map
 
     exports.arithmeticGeometricGraph = arithmeticGeometricGraph;
     exports.arithmeticGeometricSelect = arithmeticGeometricSelect;

@@ -82,6 +82,7 @@ var StepFunctions = (function (exports) {
       const q = Math.sqrt(b * b - 4 * a * c) / 2 / a;
       return [p + q, p - q];
   }
+  //# sourceMappingURL=arithmetic.js.map
 
   // ============================================================================
   /**
@@ -126,6 +127,7 @@ var StepFunctions = (function (exports) {
       }
       return result;
   }
+  //# sourceMappingURL=combinatorics.js.map
 
   // =============================================================================
   const absStr = (n, suffix) => {
@@ -224,6 +226,7 @@ var StepFunctions = (function (exports) {
           return new Complex(r * Math.cos(c.im), r * Math.sin(c.im));
       }
   }
+  //# sourceMappingURL=complex.js.map
 
   // =============================================================================
   // Core.ts | Utility Functions
@@ -330,6 +333,7 @@ var StepFunctions = (function (exports) {
           return fallback;
       }
   }
+  //# sourceMappingURL=utilities.js.map
 
   // =============================================================================
   // Core.ts | Array Functions
@@ -425,6 +429,7 @@ var StepFunctions = (function (exports) {
       result[n - 1].next = result[0];
       return result;
   }
+  //# sourceMappingURL=arrays.js.map
 
   // =============================================================================
   /** Splits a string into space separated words. */
@@ -438,6 +443,7 @@ var StepFunctions = (function (exports) {
       return str.toLowerCase().replace(/^-/, '')
           .replace(/-(.)/g, (_, g) => g.toUpperCase());
   }
+  //# sourceMappingURL=strings.js.map
 
   // =============================================================================
   /** Base class for event management. */
@@ -480,6 +486,7 @@ var StepFunctions = (function (exports) {
           }
       }
   }
+  //# sourceMappingURL=events.js.map
 
   // =============================================================================
   const shortHexRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -592,6 +599,7 @@ var StepFunctions = (function (exports) {
           return new Color(p * c1.r + (1 - p) * c2.r, p * c1.g + (1 - p) * c2.g, p * c1.b + (1 - p) * c2.b, p * c1.a + (1 - p) * c2.a);
       }
   }
+  //# sourceMappingURL=colors.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -1510,6 +1518,7 @@ var StepFunctions = (function (exports) {
       }
       return results;
   }
+  //# sourceMappingURL=geometry.js.map
 
   // =============================================================================
   var Matrix;
@@ -1677,6 +1686,7 @@ var StepFunctions = (function (exports) {
       }
       Matrix.inverse = inverse;
   })(Matrix || (Matrix = {}));
+  //# sourceMappingURL=matrix.js.map
 
   // ============================================================================
   var Random;
@@ -1833,6 +1843,7 @@ var StepFunctions = (function (exports) {
       }
       Random.chiCDF = chiCDF;
   })(Random || (Random = {}));
+  //# sourceMappingURL=random.js.map
 
   // =============================================================================
   var Regression;
@@ -1983,6 +1994,7 @@ var StepFunctions = (function (exports) {
       }
       Regression.find = find;
   })(Regression || (Regression = {}));
+  //# sourceMappingURL=regression.js.map
 
   // =============================================================================
   /** A n-dimensional Vector class. */
@@ -2047,6 +2059,7 @@ var StepFunctions = (function (exports) {
           return true;
       }
   }
+  //# sourceMappingURL=vector.js.map
 
   // =============================================================================
   /** Converts a JSON object to an HTML query string. */
@@ -2133,6 +2146,7 @@ var StepFunctions = (function (exports) {
   const doDeferredPost = throttle(sendPostData, 5000);
   window.addEventListener('online', doDeferredPost);
   window.onbeforeunload = sendPostData;
+  //# sourceMappingURL=ajax.js.map
 
   /*! *****************************************************************************
   Copyright (c) Microsoft Corporation.
@@ -2582,6 +2596,7 @@ var StepFunctions = (function (exports) {
           }).join('');
       };
   }
+  //# sourceMappingURL=eval.js.map
 
   // =============================================================================
   const touchSupport = ('ontouchstart' in window);
@@ -2987,6 +3002,7 @@ var StepFunctions = (function (exports) {
           $el._el.removeEventListener(event, fn);
       }
   }
+  //# sourceMappingURL=events.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -3169,6 +3185,7 @@ var StepFunctions = (function (exports) {
       }
       return points;
   }
+  //# sourceMappingURL=svg.js.map
 
   // =============================================================================
   // Boost.js | Canvas Drawing
@@ -3216,6 +3233,7 @@ var StepFunctions = (function (exports) {
       if (options.stroke)
           ctx.stroke();
   }
+  //# sourceMappingURL=canvas.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -4214,6 +4232,7 @@ var StepFunctions = (function (exports) {
   }
   const $body = new WindowView(document.body);
   const $html = new WindowView(document.documentElement);
+  //# sourceMappingURL=elements.js.map
 
   // =============================================================================
   const KEY_CODES = {
@@ -4458,6 +4477,7 @@ var StepFunctions = (function (exports) {
           });
       });
   }
+  //# sourceMappingURL=browser.js.map
 
   // =============================================================================
   // Prevent animations on page load.
@@ -4741,6 +4761,7 @@ var StepFunctions = (function (exports) {
       animation.promise.then(() => remove ? $el.remove() : $el.hide());
       return animation;
   }
+  //# sourceMappingURL=animate.js.map
 
   // =============================================================================
   /**
@@ -4824,6 +4845,7 @@ var StepFunctions = (function (exports) {
           this.trigger('move', p);
       }
   }
+  //# sourceMappingURL=draggable.js.map
 
   // =============================================================================
   // Boost.js | Observable
@@ -4924,6 +4946,7 @@ var StepFunctions = (function (exports) {
       });
       return proxy;
   }
+  //# sourceMappingURL=observable.js.map
 
   // =============================================================================
   function getViewParams(url, view) {
@@ -5140,6 +5163,7 @@ var StepFunctions = (function (exports) {
       forward() { window.history.forward(); }
   }
   const RouterInstance = new Router();
+  //# sourceMappingURL=router.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -5255,6 +5279,7 @@ var StepFunctions = (function (exports) {
           window.customElements.define(tagName, Constructor);
       };
   }
+  //# sourceMappingURL=webcomponents.js.map
 
   // =============================================================================
   function edgeToSegment(e) {
@@ -5435,6 +5460,7 @@ var StepFunctions = (function (exports) {
           this.trigger('update');
       }
   }
+  //# sourceMappingURL=graph.js.map
 
   // =============================================================================
   class Sketch extends EventTarget {
@@ -5519,6 +5545,7 @@ var StepFunctions = (function (exports) {
           }
       }
   }
+  //# sourceMappingURL=sketch.js.map
 
   // =============================================================================
   // Map Adjacency Tables
@@ -5652,6 +5679,7 @@ var StepFunctions = (function (exports) {
           'Herefordshire': ['Shropshire', 'Worcestershire', 'Gloucestershire'],
           'Kent': ['Essex', 'Greater_London', 'Surrey', 'East_Sussex']
       }];
+  //# sourceMappingURL=four-colour-maps.js.map
 
   // =============================================================================
   function travellingSalesman(dist) {
@@ -5673,6 +5701,7 @@ var StepFunctions = (function (exports) {
       }
       return { path: minPath, length: minLength };
   }
+  //# sourceMappingURL=geometry.js.map
 
   // =============================================================================
   // TypeScript Variables
@@ -5686,6 +5715,7 @@ var StepFunctions = (function (exports) {
   const PURPLE = '#6d3bbf';
   const TEAL = '#009ea6';
   const GREY = '#3a3645';
+  //# sourceMappingURL=constants.js.map
 
   // =============================================================================
   function bridges($section) {
@@ -6059,6 +6089,7 @@ var StepFunctions = (function (exports) {
       for (const p of initial)
           addPoint(p);
   }
+  //# sourceMappingURL=functions.js.map
 
   // =============================================================================
   function random(array) {
@@ -6135,6 +6166,7 @@ var StepFunctions = (function (exports) {
           this.$canvas.clear();
       }
   }
+  //# sourceMappingURL=chaos-game.js.map
 
   // =============================================================================
   // This is a hard-coded result of the computation below, which takes very long
@@ -6147,6 +6179,7 @@ var StepFunctions = (function (exports) {
       const [x, y] = p.split(' ');
       return new Point(+x, +y);
   });
+  //# sourceMappingURL=coastline.js.map
 
   // =============================================================================
   class JuliaCanvas {
@@ -6213,6 +6246,7 @@ var StepFunctions = (function (exports) {
       }
       return true;
   }
+  //# sourceMappingURL=mandelbrot.js.map
 
   // =============================================================================
   const url = '/resources/shared/vendor/three-91.min.js';
@@ -6255,6 +6289,7 @@ var StepFunctions = (function (exports) {
           return { $canvas, camera, renderer, draw, onDraw, add };
       });
   }
+  //# sourceMappingURL=webgl.js.map
 
   // =============================================================================
   // Polyhedron Component
@@ -6531,6 +6566,7 @@ var StepFunctions = (function (exports) {
   Solid = Solid_1 = __decorate([
       register('x-solid')
   ], Solid);
+  //# sourceMappingURL=solid.js.map
 
   // =============================================================================
   const positions = [];
@@ -6584,6 +6620,7 @@ var StepFunctions = (function (exports) {
   MengerSponge = __decorate([
       register('x-menger-sponge', { attributes: ['steps'] })
   ], MengerSponge);
+  //# sourceMappingURL=menger-sponge.js.map
 
   // =============================================================================
   let SierpinskiTetrahedra = class SierpinskiTetrahedra extends Solid {
@@ -6641,6 +6678,7 @@ var StepFunctions = (function (exports) {
   SierpinskiPyramid = __decorate([
       register('x-sierpinski-pyramid')
   ], SierpinskiPyramid);
+  //# sourceMappingURL=sierpinski-tetrahedra.js.map
 
   // =============================================================================
   const RULES = ['000', '001', '010', '100', '011', '101', '110', '111'];
@@ -6730,6 +6768,7 @@ var StepFunctions = (function (exports) {
   CellularAutomaton = __decorate([
       register('x-automaton')
   ], CellularAutomaton);
+  //# sourceMappingURL=automata.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -6857,6 +6896,7 @@ var StepFunctions = (function (exports) {
           }
       });
   }
+  //# sourceMappingURL=functions.js.map
 
   // =============================================================================
   // Audio Component
@@ -6872,6 +6912,7 @@ var StepFunctions = (function (exports) {
           this.el.play();
       }
   }
+  //# sourceMappingURL=audio.js.map
 
   // =============================================================================
   class Trail {
@@ -6959,6 +7000,7 @@ var StepFunctions = (function (exports) {
               this.trails.push(new Trail(t[0], t[1]));
       }
   }
+  //# sourceMappingURL=simulation.js.map
 
   // =============================================================================
   class Ellipse {
@@ -7016,6 +7058,7 @@ var StepFunctions = (function (exports) {
   PoolTable = __decorate([
       register('x-pool-table')
   ], PoolTable);
+  //# sourceMappingURL=pool-table.js.map
 
   // =============================================================================
   const THRESHOLD = 0.05;
@@ -7150,6 +7193,7 @@ var StepFunctions = (function (exports) {
   WaterCanvas = __decorate([
       register('x-water-canvas')
   ], WaterCanvas);
+  //# sourceMappingURL=water-ripples.js.map
 
   // =============================================================================
   const collision = new AudioPlayer('/resources/chaos/images/ball.mp3');
@@ -7200,6 +7244,7 @@ var StepFunctions = (function (exports) {
           $canvas.clear();
       });
   }
+  //# sourceMappingURL=functions.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -7264,6 +7309,7 @@ var StepFunctions = (function (exports) {
           circles.push(new Disk($svg, circles, outerCircle, label, radius * 10, initial.points[i]));
       }
   }
+  //# sourceMappingURL=functions.js.map
 
   exports.bridges = bridges;
   exports.bridgesV2 = bridges;

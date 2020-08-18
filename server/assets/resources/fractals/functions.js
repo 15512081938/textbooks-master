@@ -136,6 +136,7 @@ var StepFunctions = (function (exports) {
             return fallback;
         }
     }
+    //# sourceMappingURL=utilities.js.map
 
     // =============================================================================
     // Core.ts | Array Functions
@@ -231,6 +232,7 @@ var StepFunctions = (function (exports) {
         result[n - 1].next = result[0];
         return result;
     }
+    //# sourceMappingURL=arrays.js.map
 
     // =============================================================================
     /** Splits a string into space separated words. */
@@ -244,6 +246,7 @@ var StepFunctions = (function (exports) {
         return str.toLowerCase().replace(/^-/, '')
             .replace(/-(.)/g, (_, g) => g.toUpperCase());
     }
+    //# sourceMappingURL=strings.js.map
 
     // =============================================================================
     /** Base class for event management. */
@@ -286,6 +289,7 @@ var StepFunctions = (function (exports) {
             }
         }
     }
+    //# sourceMappingURL=events.js.map
 
     // =============================================================================
     const shortHexRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -398,6 +402,7 @@ var StepFunctions = (function (exports) {
             return new Color(p * c1.r + (1 - p) * c2.r, p * c1.g + (1 - p) * c2.g, p * c1.b + (1 - p) * c2.b, p * c1.a + (1 - p) * c2.a);
         }
     }
+    //# sourceMappingURL=colors.js.map
 
     // ============================================================================
     // Fermat.js | Utility Functions
@@ -474,6 +479,7 @@ var StepFunctions = (function (exports) {
     function square(x) {
         return x * x;
     }
+    //# sourceMappingURL=arithmetic.js.map
 
     // ============================================================================
     /**
@@ -495,6 +501,7 @@ var StepFunctions = (function (exports) {
         }
         return result;
     }
+    //# sourceMappingURL=combinatorics.js.map
 
     // =============================================================================
     const absStr = (n, suffix) => {
@@ -593,6 +600,7 @@ var StepFunctions = (function (exports) {
             return new Complex(r * Math.cos(c.im), r * Math.sin(c.im));
         }
     }
+    //# sourceMappingURL=complex.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -1320,6 +1328,7 @@ var StepFunctions = (function (exports) {
         }
         return results;
     }
+    //# sourceMappingURL=geometry.js.map
 
     // =============================================================================
     var Matrix;
@@ -1487,6 +1496,7 @@ var StepFunctions = (function (exports) {
         }
         Matrix.inverse = inverse;
     })(Matrix || (Matrix = {}));
+    //# sourceMappingURL=matrix.js.map
 
     // ============================================================================
     var Random;
@@ -1643,6 +1653,7 @@ var StepFunctions = (function (exports) {
         }
         Random.chiCDF = chiCDF;
     })(Random || (Random = {}));
+    //# sourceMappingURL=random.js.map
 
     // =============================================================================
     var Regression;
@@ -1793,6 +1804,7 @@ var StepFunctions = (function (exports) {
         }
         Regression.find = find;
     })(Regression || (Regression = {}));
+    //# sourceMappingURL=regression.js.map
 
     // =============================================================================
     /** Converts a JSON object to an HTML query string. */
@@ -1879,6 +1891,7 @@ var StepFunctions = (function (exports) {
     const doDeferredPost = throttle(sendPostData, 5000);
     window.addEventListener('online', doDeferredPost);
     window.onbeforeunload = sendPostData;
+    //# sourceMappingURL=ajax.js.map
 
     // =============================================================================
     // Boost.js | Expression Parsing
@@ -2296,6 +2309,7 @@ var StepFunctions = (function (exports) {
             }).join('');
         };
     }
+    //# sourceMappingURL=eval.js.map
 
     // =============================================================================
     const touchSupport = ('ontouchstart' in window);
@@ -2701,6 +2715,7 @@ var StepFunctions = (function (exports) {
             $el._el.removeEventListener(event, fn);
         }
     }
+    //# sourceMappingURL=events.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -2883,6 +2898,7 @@ var StepFunctions = (function (exports) {
         }
         return points;
     }
+    //# sourceMappingURL=svg.js.map
 
     // =============================================================================
     // Boost.js | Canvas Drawing
@@ -2930,6 +2946,7 @@ var StepFunctions = (function (exports) {
         if (options.stroke)
             ctx.stroke();
     }
+    //# sourceMappingURL=canvas.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -3928,6 +3945,7 @@ var StepFunctions = (function (exports) {
     }
     const $body = new WindowView(document.body);
     const $html = new WindowView(document.documentElement);
+    //# sourceMappingURL=elements.js.map
 
     // =============================================================================
     const KEY_CODES = {
@@ -4172,6 +4190,7 @@ var StepFunctions = (function (exports) {
             });
         });
     }
+    //# sourceMappingURL=browser.js.map
 
     // =============================================================================
     // Prevent animations on page load.
@@ -4455,6 +4474,7 @@ var StepFunctions = (function (exports) {
         animation.promise.then(() => remove ? $el.remove() : $el.hide());
         return animation;
     }
+    //# sourceMappingURL=animate.js.map
 
     // =============================================================================
     // Boost.js | Observable
@@ -4555,6 +4575,7 @@ var StepFunctions = (function (exports) {
         });
         return proxy;
     }
+    //# sourceMappingURL=observable.js.map
 
     // =============================================================================
     function getViewParams(url, view) {
@@ -4771,6 +4792,7 @@ var StepFunctions = (function (exports) {
         forward() { window.history.forward(); }
     }
     const RouterInstance = new Router();
+    //# sourceMappingURL=router.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -4886,10 +4908,12 @@ var StepFunctions = (function (exports) {
             window.customElements.define(tagName, Constructor);
         };
     }
+    //# sourceMappingURL=webcomponents.js.map
 
     // =============================================================================
     const BLUE = '#0f82f2';
     const GREY = '#3a3645';
+    //# sourceMappingURL=constants.js.map
 
     // =============================================================================
     function random(array) {
@@ -4966,6 +4990,7 @@ var StepFunctions = (function (exports) {
             this.$canvas.clear();
         }
     }
+    //# sourceMappingURL=chaos-game.js.map
 
     // =============================================================================
     // This is a hard-coded result of the computation below, which takes very long
@@ -4978,6 +5003,7 @@ var StepFunctions = (function (exports) {
         const [x, y] = p.split(' ');
         return new Point(+x, +y);
     });
+    //# sourceMappingURL=coastline.js.map
 
     // =============================================================================
     function drawSierpinski([a, b, c], i) {
@@ -5003,6 +5029,7 @@ var StepFunctions = (function (exports) {
         }
         return drawKoch(new Polygon(...points), i - 1);
     }
+    //# sourceMappingURL=fractals.js.map
 
     // =============================================================================
     class JuliaCanvas {
@@ -5069,6 +5096,7 @@ var StepFunctions = (function (exports) {
         }
         return true;
     }
+    //# sourceMappingURL=mandelbrot.js.map
 
     // =============================================================================
     const url = '/resources/shared/vendor/three-91.min.js';
@@ -5111,6 +5139,7 @@ var StepFunctions = (function (exports) {
             return { $canvas, camera, renderer, draw, onDraw, add };
         });
     }
+    //# sourceMappingURL=webgl.js.map
 
     // =============================================================================
     // Polyhedron Component
@@ -5387,6 +5416,7 @@ var StepFunctions = (function (exports) {
     Solid = Solid_1 = __decorate([
         register('x-solid')
     ], Solid);
+    //# sourceMappingURL=solid.js.map
 
     // =============================================================================
     const positions = [];
@@ -5440,6 +5470,7 @@ var StepFunctions = (function (exports) {
     MengerSponge = __decorate([
         register('x-menger-sponge', { attributes: ['steps'] })
     ], MengerSponge);
+    //# sourceMappingURL=menger-sponge.js.map
 
     // =============================================================================
     let SierpinskiTetrahedra = class SierpinskiTetrahedra extends Solid {
@@ -5497,6 +5528,7 @@ var StepFunctions = (function (exports) {
     SierpinskiPyramid = __decorate([
         register('x-sierpinski-pyramid')
     ], SierpinskiPyramid);
+    //# sourceMappingURL=sierpinski-tetrahedra.js.map
 
     // =============================================================================
     const RULES = ['000', '001', '010', '100', '011', '101', '110', '111'];
@@ -5586,6 +5618,7 @@ var StepFunctions = (function (exports) {
     CellularAutomaton = __decorate([
         register('x-automaton')
     ], CellularAutomaton);
+    //# sourceMappingURL=automata.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -5987,6 +6020,7 @@ var StepFunctions = (function (exports) {
         });
         $step.model.cardioid = new Polygon(...points);
     }
+    //# sourceMappingURL=functions.js.map
 
     exports.cellular = cellular;
     exports.chaosGame = chaosGame;

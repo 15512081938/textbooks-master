@@ -8,6 +8,24 @@ initcallback();
 
 export function declareaandinitializeavariable($step: Step) {
     
+    highlightcode($step);
+    
+}
+
+export function declareavariable($step: Step) {
+    
+    highlightcode($step);
+    
+}
+
+export function initializeavariable($step: Step) {
+    
+    highlightcode($step);
+    
+}
+
+export function declareainitializeavariable($step: Step) {
+    
     initcode($step);
     highlightcode($step);
     
