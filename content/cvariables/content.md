@@ -572,7 +572,7 @@ _{code}char_ : 单个字符
 ## 附加题：健康质量指数
 
 > id: additionalquestions
-> section: additionalquestionsw
+> section: additionalquestions
 
 我们身体是不是健康的呢？我们都不确定，有的人说很健康，有的人却不健康，我们如果要科学的定义我们的身体健康程度，有一个词，大家应该了解一下这个词 ——— “身体质量指数（BMI）” 。BMI是一个，规范我们人体脂肪的标准公式。
 
