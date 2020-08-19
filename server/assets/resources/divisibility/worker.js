@@ -9,7 +9,6 @@
   function uid(n = 10) {
       return Math.random().toString(36).substr(2, n);
   }
-  //# sourceMappingURL=utilities.js.map
 
   // =============================================================================
   // Core.ts | Array Functions
@@ -67,7 +66,6 @@
   function total(array) {
       return array.reduce((t, v) => t + v, 0);
   }
-  //# sourceMappingURL=arrays.js.map
 
   // ============================================================================
   /** Checks if a number n is prime. */
@@ -117,7 +115,6 @@
           b += 2;
       }
   }
-  //# sourceMappingURL=number-theory.js.map
 
   // =============================================================================
   var Matrix;
@@ -285,7 +282,6 @@
       }
       Matrix.inverse = inverse;
   })(Matrix || (Matrix = {}));
-  //# sourceMappingURL=matrix.js.map
 
   // ============================================================================
   var Random;
@@ -442,7 +438,6 @@
       }
       Random.chiCDF = chiCDF;
   })(Random || (Random = {}));
-  //# sourceMappingURL=random.js.map
 
   // =============================================================================
   var Regression;
@@ -593,7 +588,6 @@
       }
       Regression.find = find;
   })(Regression || (Regression = {}));
-  //# sourceMappingURL=regression.js.map
 
   // =============================================================================
   onmessage = (e) => {
@@ -610,6 +604,5 @@
       }
       return postMessage(response);
   };
-  //# sourceMappingURL=worker.js.map
 
 }());

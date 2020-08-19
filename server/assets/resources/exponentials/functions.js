@@ -108,7 +108,6 @@ var StepFunctions = (function (exports) {
     function square(x) {
         return x * x;
     }
-    //# sourceMappingURL=arithmetic.js.map
 
     // ============================================================================
     /**
@@ -130,7 +129,6 @@ var StepFunctions = (function (exports) {
         }
         return result;
     }
-    //# sourceMappingURL=combinatorics.js.map
 
     // =============================================================================
     // Core.ts | Utility Functions
@@ -231,7 +229,6 @@ var StepFunctions = (function (exports) {
             return fallback;
         }
     }
-    //# sourceMappingURL=utilities.js.map
 
     // =============================================================================
     // Core.ts | Array Functions
@@ -309,7 +306,6 @@ var StepFunctions = (function (exports) {
         }
         return chunks;
     }
-    //# sourceMappingURL=arrays.js.map
 
     // =============================================================================
     /** Splits a string into space separated words. */
@@ -323,7 +319,6 @@ var StepFunctions = (function (exports) {
         return str.toLowerCase().replace(/^-/, '')
             .replace(/-(.)/g, (_, g) => g.toUpperCase());
     }
-    //# sourceMappingURL=strings.js.map
 
     // =============================================================================
     /** Base class for event management. */
@@ -366,7 +361,6 @@ var StepFunctions = (function (exports) {
             }
         }
     }
-    //# sourceMappingURL=events.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -732,7 +726,6 @@ var StepFunctions = (function (exports) {
         }
         return results;
     }
-    //# sourceMappingURL=geometry.js.map
 
     // =============================================================================
     var Matrix;
@@ -900,7 +893,6 @@ var StepFunctions = (function (exports) {
         }
         Matrix.inverse = inverse;
     })(Matrix || (Matrix = {}));
-    //# sourceMappingURL=matrix.js.map
 
     // ============================================================================
     var Random;
@@ -1057,7 +1049,6 @@ var StepFunctions = (function (exports) {
         }
         Random.chiCDF = chiCDF;
     })(Random || (Random = {}));
-    //# sourceMappingURL=random.js.map
 
     // =============================================================================
     var Regression;
@@ -1208,7 +1199,6 @@ var StepFunctions = (function (exports) {
         }
         Regression.find = find;
     })(Regression || (Regression = {}));
-    //# sourceMappingURL=regression.js.map
 
     // =============================================================================
     /** Converts a JSON object to an HTML query string. */
@@ -1295,7 +1285,6 @@ var StepFunctions = (function (exports) {
     const doDeferredPost = throttle(sendPostData, 5000);
     window.addEventListener('online', doDeferredPost);
     window.onbeforeunload = sendPostData;
-    //# sourceMappingURL=ajax.js.map
 
     // =============================================================================
     // Boost.js | Expression Parsing
@@ -1713,7 +1702,6 @@ var StepFunctions = (function (exports) {
             }).join('');
         };
     }
-    //# sourceMappingURL=eval.js.map
 
     // =============================================================================
     const touchSupport = ('ontouchstart' in window);
@@ -2093,7 +2081,6 @@ var StepFunctions = (function (exports) {
             $el._el.removeEventListener(event, fn);
         }
     }
-    //# sourceMappingURL=events.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -2276,7 +2263,6 @@ var StepFunctions = (function (exports) {
         }
         return points;
     }
-    //# sourceMappingURL=svg.js.map
 
     // =============================================================================
     // Boost.js | Canvas Drawing
@@ -2324,7 +2310,6 @@ var StepFunctions = (function (exports) {
         if (options.stroke)
             ctx.stroke();
     }
-    //# sourceMappingURL=canvas.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -3323,7 +3308,6 @@ var StepFunctions = (function (exports) {
     }
     const $body = new WindowView(document.body);
     const $html = new WindowView(document.documentElement);
-    //# sourceMappingURL=elements.js.map
 
     // =============================================================================
     const KEY_CODES = {
@@ -3568,7 +3552,6 @@ var StepFunctions = (function (exports) {
             });
         });
     }
-    //# sourceMappingURL=browser.js.map
 
     // =============================================================================
     // Prevent animations on page load.
@@ -3852,7 +3835,6 @@ var StepFunctions = (function (exports) {
         animation.promise.then(() => remove ? $el.remove() : $el.hide());
         return animation;
     }
-    //# sourceMappingURL=animate.js.map
 
     // =============================================================================
     function getViewParams(url, view) {
@@ -4069,7 +4051,6 @@ var StepFunctions = (function (exports) {
         forward() { window.history.forward(); }
     }
     const RouterInstance = new Router();
-    //# sourceMappingURL=router.js.map
 
     // =============================================================================
     // -----------------------------------------------------------------------------
@@ -4185,7 +4166,6 @@ var StepFunctions = (function (exports) {
             window.customElements.define(tagName, Constructor);
         };
     }
-    //# sourceMappingURL=webcomponents.js.map
 
     // =============================================================================
     const url = '/resources/shared/vendor/three-91.min.js';
@@ -4228,7 +4208,6 @@ var StepFunctions = (function (exports) {
             return { $canvas, camera, renderer, draw, onDraw, add };
         });
     }
-    //# sourceMappingURL=webgl.js.map
 
     // =============================================================================
     // Polyhedron Component
@@ -4505,7 +4484,6 @@ var StepFunctions = (function (exports) {
     Solid = Solid_1 = __decorate([
         register('x-solid')
     ], Solid);
-    //# sourceMappingURL=solid.js.map
 
     // =============================================================================
     const RED = 0xcd0e66;
@@ -4552,7 +4530,6 @@ var StepFunctions = (function (exports) {
     Atom = __decorate([
         register('x-atom')
     ], Atom);
-    //# sourceMappingURL=atom.js.map
 
     // =============================================================================
     function radioactive1($step) {
@@ -4662,7 +4639,6 @@ var StepFunctions = (function (exports) {
             }
         });
     }
-    //# sourceMappingURL=functions.js.map
 
     exports.carbonSolver = carbonSolver;
     exports.radioactive1 = radioactive1;

@@ -69,12 +69,24 @@ export function challengetemperature2($step: Step) {
 
 
 export function review($step: Step) {
+
+    highlightcode($step);
+    
+}
+
+
+export function additionalquestions($step: Step) {
     
     initcode($step);
     highlightcode($step);
     
 }
 
+export function test($step: Step) {
+    
+    highlightcode($step);
+    
+}
 
 export function introdutedatatype($step: Step) {
     console.log(">>> 此时进入到函数处理阶段");

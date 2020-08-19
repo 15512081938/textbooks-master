@@ -26,7 +26,6 @@ var StepFunctions = (function (exports) {
     //         }
     //     }, false);
     // }
-    //# sourceMappingURL=ide.js.map
 
     function parametersandarguments($step) {
         initcode($step);
@@ -70,7 +69,6 @@ var StepFunctions = (function (exports) {
     function thenile($step) {
         initcode($step);
     }
-    //# sourceMappingURL=functions.js.map
 
     exports.defaultarguments = defaultarguments;
     exports.defaultreturn = defaultreturn;

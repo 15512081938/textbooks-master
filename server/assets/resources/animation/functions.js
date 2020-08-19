@@ -218,7 +218,6 @@ var StepFunctions = (function (exports) {
             };
         });
     }
-    //# sourceMappingURL=functions.js.map
 
     exports.interactiveLessonIntroductionToAnimationFirst = interactiveLessonIntroductionToAnimationFirst;
 

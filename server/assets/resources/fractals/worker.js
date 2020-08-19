@@ -56,6 +56,5 @@
           postMessage(computeMandelbrot(options));
       }
   };
-  //# sourceMappingURL=worker.js.map
 
 }());

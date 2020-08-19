@@ -37,7 +37,6 @@ var StepFunctions = (function (exports) {
   function square(x) {
       return x * x;
   }
-  //# sourceMappingURL=arithmetic.js.map
 
   // =============================================================================
   const absStr = (n, suffix) => {
@@ -136,7 +135,6 @@ var StepFunctions = (function (exports) {
           return new Complex(r * Math.cos(c.im), r * Math.sin(c.im));
       }
   }
-  //# sourceMappingURL=complex.js.map
 
   // =============================================================================
   // Core.ts | Utility Functions
@@ -146,7 +144,6 @@ var StepFunctions = (function (exports) {
   function uid(n = 10) {
       return Math.random().toString(36).substr(2, n);
   }
-  //# sourceMappingURL=utilities.js.map
 
   // =============================================================================
   // Core.ts | Array Functions
@@ -204,7 +201,6 @@ var StepFunctions = (function (exports) {
   function total(array) {
       return array.reduce((t, v) => t + v, 0);
   }
-  //# sourceMappingURL=arrays.js.map
 
   // =============================================================================
   // -----------------------------------------------------------------------------
@@ -357,7 +353,6 @@ var StepFunctions = (function (exports) {
       const a = Math.atan2(p.y - c.y, p.x - c.x);
       return (a + TWO_PI) % TWO_PI;
   }
-  //# sourceMappingURL=geometry.js.map
 
   // =============================================================================
   var Matrix;
@@ -525,7 +520,6 @@ var StepFunctions = (function (exports) {
       }
       Matrix.inverse = inverse;
   })(Matrix || (Matrix = {}));
-  //# sourceMappingURL=matrix.js.map
 
   // ============================================================================
   var Random;
@@ -682,7 +676,6 @@ var StepFunctions = (function (exports) {
       }
       Random.chiCDF = chiCDF;
   })(Random || (Random = {}));
-  //# sourceMappingURL=random.js.map
 
   // =============================================================================
   var Regression;
@@ -833,7 +826,6 @@ var StepFunctions = (function (exports) {
       }
       Regression.find = find;
   })(Regression || (Regression = {}));
-  //# sourceMappingURL=regression.js.map
 
   // =============================================================================
   function demo($step) {
@@ -843,7 +835,6 @@ var StepFunctions = (function (exports) {
           return new Point(root.re, root.im);
       };
   }
-  //# sourceMappingURL=functions.js.map
 
   exports.demo = demo;
 

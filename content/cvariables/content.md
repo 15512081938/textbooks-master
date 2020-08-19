@@ -552,7 +552,7 @@ _{input#challengetemperature2(type="checkbox" disabled="disabled")}_ 2.写完程
 
 我们来做一下课前的回顾吧：
 
-- 变量，就好比一个 “ 容器 ” ，而变量的数据，就需要盛放在 “ 容器 ” 中。
+- 变量，就好比一个 “ 容器 ” ，而变量的值，就需要盛放在 “ 容器 ” 中。
 
 - 需要我们现在掌握的，C++基本数据类型：
   
@@ -564,9 +564,15 @@ _{code}char_ : 单个字符
 
 - 一个等号 _{code}=_ 表示赋值。将右边的值，赋值给左边的变量。它并不是数学意义上的相等。
 
-- _{code}cin_ 可以让用户输入数据，并且要搭配 _{code}>>_ 。
+- _{code}cin_ 可以让用户输入数据，并且要搭配  [[>>|<<]] 。
 
-##### 附加题：
+
+---
+
+## 附加题：健康质量指数
+
+> id: additionalquestions
+> section: additionalquestionsw
 
 我们身体是不是健康的呢？我们都不确定，有的人说很健康，有的人却不健康，我们如果要科学的定义我们的身体健康程度，有一个词，大家应该了解一下这个词 ——— “身体质量指数（BMI）” 。BMI是一个，规范我们人体脂肪的标准公式。
 
@@ -580,5 +586,224 @@ _{code}char_ : 单个字符
 
     div#ide
         pre.initcode
-            include codes/review.cpp
+            include codes/additionalquestions.cpp
         iframe(src="http://114.116.82.25:7000/#/exercise?language=cpp",scrolling="no",style="width: 100%; height: 500px; border: none;")
+
+
+---
+
+## 测试
+
+> id: test
+> section: test
+
+**1.** _{code}cin_ 的作用是什么？
+
+A.用于声明变量
+
+B.用于编写注释
+
+C.用于输出到运行结果窗口
+
+D.用于从键盘中读取数据
+
+答案：[[D|C|B|A]]
+
+**2.** C++为什么要使用变量？
+
+A.为了存储数据
+
+B.为了记录代码
+
+C.为了编译代码
+
+D.为了在不同平台上使用
+
+答案：[[A|C|B|D]]
+
+**3.** division这个变量值为多少？
+
+```c++
+int division;
+division = 24 / 8;
+```
+
+A.0
+
+B.1
+
+C.2
+
+D.3
+
+答案：[[D|C|B|A]]
+
+
+**4.** flag的数据类型是什么？
+
+```c++
+bool flag = false;
+```
+
+A.string
+
+B.int
+
+C.bool
+
+D.double
+
+答案：[[C|D|B|A]]
+
+
+**5.** 在下面的声明和初始化过程中，变量名是什么？
+
+```c++
+int year = 2020;
+```
+
+A.int
+
+B.year
+
+C.=
+
+D.2020
+
+答案：[[C|D|B|A]]
+
+
+**6.** 以下哪一个不符合变量名的规则？
+
+A._cat
+
+B.Camluni_2017
+
+C.int
+
+D.Camluni_2017
+
+6.以下哪一个符合变量名的规则？
+
+A.apple!
+
+B.2017Camluni
+
+C.true
+
+D._int
+
+答案：[[C|D|B|A]]
+
+**7.** 运行下面代码，输入12，输出结果是什么？
+
+```c++
+#include &ltiostream>
+using namespace std;
+
+int main() {
+    int age;
+
+    cin >> age;
+
+    cout << age << "岁\n";
+
+}
+```
+
+A.12
+
+B.12岁
+
+C.12"岁"
+
+D.12"岁\n"
+
+
+答案：[[B|C|D|A]]
+
+**8.** 运行下面代码，输出结果是什么？
+
+```c++
+#include &ltiostream>
+using namespace std;
+
+int main() {
+    int score;
+
+    score = 60 + 40;
+
+    cout << "您好，您的分数为：";
+    cout << score;
+    cout << " 分\n";
+    
+}
+```
+
+A."您好，您的分数为："score" 分"
+
+B."您好，您的分数为："100" 分"
+
+C.您好，您的分数为：60 + 40 分
+
+D.您好，您的分数为：100 分
+
+答案：[[D|C|B|A]]
+
+
+**9.** 运行结果是多少？
+
+```c++
+#include &ltiostream>
+using namespace std;
+
+int main() {
+
+    double price;
+    double num;
+    double total;
+
+    price = 1.20;
+    num = 2;
+    total = price * num;
+
+    cout << total;
+
+}
+```
+
+A.2.4
+
+B.2.40
+
+C.24
+
+D.2
+
+答案：[[A|C|D|B]]
+
+**10.** 那个不是C++的基本数据类型？
+
+A.int
+
+B.double
+
+C.char
+
+D.return
+
+答案：[[D|A|C|B]]
+
+**11.** _{code}SCORE_ 和 _{code}score_ 表示同一个变量名。 [[错误|正确]]
+
+**12.** 一旦变量名声明并初始化了，就不可以修改变量值了。 [[错误|正确]]
+
+**13.** 变量名可以同时声明并初始化。 [[正确|错误]]
+
+**14.** 1和1.0属于同一种数据类型。 [[错误|正确]]
+
+**15.** _{code} 1/2.0_ 结果是[[0.5]]。
+
+**16.** _{code} 10 % 3_ 结果是[[1]]。
+
+**17.** _{code} ( 2 * 2 + 2 - 1) % 2_ 结果是[[1]]。
