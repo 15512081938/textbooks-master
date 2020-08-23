@@ -10,15 +10,15 @@
 		// 地图
 		class M {
 			constructor() {
-				this.width = 600;
+				this.width = 400;
 				this.height = 400;
-				this.backgroundColor = 'pink';
+				this.backgroundColor = '#00FF00';
 				this.map_element = null;
 
 				this.margin = 'auto';
 				this.position = 'relative';
-				this.marginTop = 50;
-				this.borderRadius = 0.1;
+				this.marginTop = 150;
+				this.borderRadius = 0;
 			}
 			show() {
 				var map_div = document.createElement('div');
@@ -37,18 +37,19 @@
 		var map = new M();
 		map.show();
 
+
 		// 食物
 		class F {
 			constructor(map) {
 				this.width = 20;
 				this.height = 20;
-				this.backgroundColor = 'green';
+				this.backgroundColor = '#000000';
 				this.position = 'absolute';
 				this.x = 0;
 				this.y = 0;
 				this.food_element = null;
 
-				this.borderRadius = 0.5;
+				this.borderRadius = 0;
 			}
 			show() {
 				if (!this.food_element) {
@@ -75,14 +76,14 @@
 		// 宽高定位 可以改变方位
 		class S {
 			constructor() {
-				this.body = [[5, 3, 'red', null], [4, 3, 'blue', null], [3, 3, 'blue', null]];
+				this.body = [[5, 3, '#FF0000', null], [4, 3, '#FF0000', null], [3, 3, '#FF0000', null]];
 				this.width = 20;
 				this.height = 20;
 				this.position = 'absolute';
 				this.direction = 'right';
 				this.change = false;
 
-				this.borderRadius = 0.5;
+				this.borderRadius = 0;
 			}
 			show() {
 				// 创建每一节身体，用遍历
@@ -100,8 +101,8 @@
 					this.body[i][3].style.backgroundColor = this.body[i][2];
 					this.body[i][3].style.top = this.body[i][1] * this.width + 'px';
 					this.body[i][3].style.left = this.body[i][0] * this.height + 'px';
-					this.body[0][3].style.borderRadius = this.borderRadius * this.width + 'px';
-					this.body[i][3].style.borderRadius = 0.3 * this.width + 'px';
+					this.body[0][3].style.borderRadius = 0 * this.borderRadius * this.width + 'px';
+					this.body[i][3].style.borderRadius = 0 * this.width + 'px';
 				}
 				this.change = true; //是否可以改变方位
 			}
@@ -150,7 +151,7 @@
 
 				// 判断 吃到东西
 				if (this.body[0][0] == food.x && this.body[0][1] == food.y) {
-					this.body[this.body.length] = [1, 1, 'blue', null]; //这个值随便
+					this.body[this.body.length] = [1, 1, '#FF0000', null]; //这个值随便
 					// 刷新食物
 					food.show();
 					if (t > 200) {
@@ -179,6 +180,7 @@
 			clearInterval(timer);
 			timer = setInterval(function () {
 				snake.move();
+				prompt("请输入您的名字：");
 			}, t);
 		}
 		T();
