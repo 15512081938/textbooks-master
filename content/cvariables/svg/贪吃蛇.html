@@ -4,7 +4,10 @@
 	}
 </style>
 
+
 <body>
+	<script src="http://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+	<script src="layer/layer.js"></script>
 	<script>
 		//三个对象： 地图m  食物f  蛇s    以下 _element的 都代表这个标签
 		// 地图
@@ -19,6 +22,8 @@
 				this.position = 'relative';
 				this.marginTop = 150;
 				this.borderRadius = 0;
+				this.overflow = 'hidden';
+
 			}
 			show() {
 				var map_div = document.createElement('div');
@@ -29,8 +34,20 @@
 				map_div.style.margin = 'auto';
 				map_div.style.marginTop = this.marginTop + 'px';
 				map_div.style.borderRadius = this.borderRadius * this.height + 'px';
+				map_div.style.overflow = 'hidden';
+
 				document.body.appendChild(map_div);
 				this.map_element = map_div;
+
+				for (let i = 0; i < this.width * this.height / 400; i++) {
+					var line_div = document.createElement('div');
+					line_div.style.width = 18 + 'px';
+					line_div.style.height = 18 + 'px';
+					line_div.style.backgroundColor = '#00FF00';
+					line_div.style.float = 'left';
+					line_div.style.border = "1px solid #00C800";
+					map_div.appendChild(line_div);
+				}
 			}
 		}
 
@@ -123,27 +140,40 @@
 				} else if (this.direction == 'right') {
 					this.body[0][0] = this.body[0][0] + 1;
 				}
-				//判断 边界条件
-				if (this.body[0][0] < 0 || this.body[0][0] >= (map.width / food.width) || this.body[0][1] < 0 || this.body[0][1] >= (map.height / food.height)) {
+				//判断 边界条件 0-19
+				if (this.body[0][0] <= 0 || this.body[0][0] >= (map.width / food.width) || this.body[0][1] <= 0 || this.body[0][1] >= (map.height / food.height)) {
 					clearInterval(timer);
-					alert('游戏结束 您的分数为:' + res);
-					if (confirm('确认要重新开始吗？')) {
-						location.reload();
-					} else {
-						return;
-					}
+					layer.alert('游戏结束 , ' + sname + ' 的分数为 ：' + res + ' 分', {
+						skin: 'layui-layer-molv', //样式类名
+						closeBtn: 0,
+					}, function () {
+						layer.confirm('确认要重新开始吗？', {
+							btn: ['再来一次', '不来了'] //按钮
+						}, function () {
+							location.reload();
+						}, function () {
+							return;
+						});
+					});
+					// alert('游戏结束 , ' + sname + ' 的分数为 ：' + res + ' 分');
 				}
-				//判断 蛇头是否撞自己
+				// 判断 蛇头是否撞自己
 				// 错误：下标从1开始，不能包含自己了，不然自己会重合
 				for (var i = 1; i < this.body.length; i++) {
 					if (this.body[0][0] == this.body[i][0] && this.body[0][1] == this.body[i][1]) {
 						clearInterval(timer);
-						alert('游戏结束 您的分数为:' + res);
-						if (confirm('确认要重新开始吗？')) {
-							location.reload();
-						} else {
-							return;
-						}
+						layer.alert('游戏结束 , ' + sname + ' 的分数为 ：' + res + ' 分', {
+							skin: 'layui-layer-molv' //样式类名
+							, closeBtn: 0
+						}, function () {
+							layer.confirm('确认要重新开始吗？', {
+								btn: ['再来一次', '不来了'] //按钮
+							}, function () {
+								location.reload();
+							}, function () {
+								return;
+							});
+						});
 					}
 				}
 				//重新显示
@@ -175,15 +205,26 @@
 		var timer;
 		var t = 300;
 		var res = 0;
+		var num = false;
+		var sname = '';
 		function T() {
 			// 先清除计时器，在重新加载计时器，本身没啥，就是为了前面的snake.move 调用重新加载
 			clearInterval(timer);
-			timer = setInterval(function () {
-				snake.move();
-				prompt("请输入您的名字：");
-			}, t);
+			if (num) {
+				timer = setInterval(function () {
+					snake.move();
+				}, t);
+			}
 		}
-		T();
+
+		layer.ready(function () {
+			layer.prompt({ title: '请输入您的名字：', formType: 0 }, function (text, index) {
+				layer.close(index);
+				sname = text;
+				num = true;
+				T();
+			});
+		});
 
 		// 控制蛇的拐弯
 		window.onkeyup = function (e) {
