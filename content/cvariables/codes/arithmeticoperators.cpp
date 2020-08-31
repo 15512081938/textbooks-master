@@ -5,8 +5,8 @@ int main() {
 
   int score = 0;
 
-  // Change score here:
-  score=0 + 5;
-  cout<< score <<"\n";
+  // code...
+
+  return 0;
   
 }

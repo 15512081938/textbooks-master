@@ -3,9 +3,7 @@ using namespace std;
 
 int main() {
 
-   int score = 0;
-   
-   // Declare and initialize a variable here
+   // code...
    
    
    return 0;
