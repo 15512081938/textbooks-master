@@ -464,8 +464,6 @@ _{input#chaining(type="checkbox" disabled="disabled")}_ 1.我们已经声明了�
 
 ```c++
 int score = 5;
-
-cout << "您好，您的分数为：" << score << " 分\n";
 ```
 
 _{input#chaining(type="checkbox" disabled="disabled")}_ 2.现在使用综合输出下面的内容：
