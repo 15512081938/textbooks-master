@@ -51,7 +51,7 @@
     "@mathigon/hilbert": "^0.5.0",
     "@types/d3": "^5.7.2",
     "@types/topojson": "^3.2.2",
-    "three": "^0.110.0",
+    "three": "^0.125.0",
     "@types/highlight.js": "9.12.4"
   }
 }
